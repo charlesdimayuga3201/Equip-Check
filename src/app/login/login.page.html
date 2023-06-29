@@ -35,8 +35,8 @@
     <img class="img-d"  alt="bus" src="assets/bsu-a.png" />
     
       <ion-title class="ct-title" >EquipCheck</ion-title>
-      <form action="">
-      <ion-item>
+      <form action="">  
+      <ion-item class="itm1">
         <ion-input class="design-input" label="Username"
         labelPlacement="stacked"
         [clearOnEdit]="true"
@@ -45,7 +45,7 @@
         [(ngModel)]="Username"></ion-input>
       </ion-item>
       <br/>
-      <ion-item>
+      <ion-item class="itm2">
         <ion-input class="design-input" 
         label="Password"
         labelPlacement="stacked"
@@ -55,7 +55,7 @@
         [(ngModel)]="Password"></ion-input>
       </ion-item>
     </form>
-      <ion-button (click)="logMeIn()">Login</ion-button>
+      <ion-button (click)="logMeIn()" expand="block">Login</ion-button>
     
  
 
