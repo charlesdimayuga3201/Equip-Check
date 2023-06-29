@@ -1,0 +1,91 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="bg-image"></div>
+
+
+
+<ion-content class="ion-padding">
+ 
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="email" [(ngModel)]="Username" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="Password" required></ion-input>
+    </ion-item>
+
+    <div class="ion-text-center ion-padding">
+      <ion-button type="submit" expand="full" (click)="logMeIn()">Login</ion-button>
+    </div>
+ 
+
+</ion-content> -->
+
+
+
+
+<ion-content [fullscreen]="true" class="all-content">
+ 
+    <img class="img-d"  alt="bus" src="assets/bsu-a.png" />
+    
+      <ion-title class="ct-title" >EquipCheck</ion-title>
+      <form action="">
+      <ion-item>
+        <ion-input class="design-input" label="Username"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Username"  
+        type="text" 
+        [(ngModel)]="Username"></ion-input>
+      </ion-item>
+      <br/>
+      <ion-item>
+        <ion-input class="design-input" 
+        label="Password"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Password"   
+        type="Password" 
+        [(ngModel)]="Password"></ion-input>
+      </ion-item>
+    </form>
+      <ion-button (click)="logMeIn()">Login</ion-button>
+    
+ 
+
+
+
+
+
+
+  <!-- <div id="container">
+  <div class="img-container">
+    <img src="assets/bsu-a.png" alt="BSU">
+  </div>
+      <div class="ctt-container">
+    <h1>EquipCheck</h1>
+    <p>Always make sure safety equipment are in good condition</p>
+
+    <ion-item class="input-d">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="email" [(ngModel)]="Username" required></ion-input>
+    </ion-item>
+
+    <ion-item class="input-d">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="Password" required></ion-input>
+    </ion-item>
+
+    <div class="ion-text-center ion-padding">
+      <ion-button type="submit"  (click)="logMeIn()">Login</ion-button>
+    </div>
+  </div>
+  </div> -->
+</ion-content>
+
