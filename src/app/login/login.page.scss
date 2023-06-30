@@ -1,47 +1,68 @@
-.all-content{
- --background-color: #ff8c6b;
- 
-    text-align: center;
+ion-content {
   
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+ background: url(/assets/bg.png); /* Set the background color */
+ --padding-top: 70px;
 
+  .login-container {
+    
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px ;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-label {
+    color: #a4a4a4;
+}
+.rmb{
+  font-size: 12px;
+}
+ion-col a{
+    font-size: 12px;
+    padding-left: 50px;
+    text-decoration: none;
+}
+ion-col #remember-me{
+    position: relative;
+    top:2px;
+    margin-right: 5px;
+    
+}
+  ion-item {
+    margin-bottom: 20px;
 
-}
-.itm1{
-  padding-left: 10%;
-  padding-right: 10%;
- 
-}
-.itm2{
-  padding-left: 10%;
-  padding-right: 10%;
- 
+    ion-input {
+      
+      border-radius: 5px;
+    }
+  }
+
+  ion-button {
+    --background: #1972d1; /* Set the button background color */
+    --border-radius: 5px;
+  }
 }
 .img-d{
  
   width: 100%;
   height: auto;
   // opacity: 70%;
- border-bottom-left-radius: 12px;
- border-bottom-right-radius: 12px;
-}
-.card-content{
-  
-  border-radius: 20px;
-  position: absolute;
-  height: auto;
+  border-radius: 5px;
 }
 .ct-title{
-    padding-top: 50px;
-    color: #FF594F;
-    font-size: 47px;
-    font-weight: 700;
-    line-height: 133.9%;
+  color: #FF594F;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 133.9%;
+  text-align: center;
 }
+ion-button {
 
+  margin-top: 10%;
+  --border-radius: 25px;
+  text-transform: initial;
+  --background: #57708C;
 
-
+}
