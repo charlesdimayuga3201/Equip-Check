@@ -13,9 +13,9 @@ Nowadays, safety equipment is frequently disregarded given that people do not kn
   As a result, this project can monitor, check maintenance, and keep track of safety equipment information that will help its client, which is the offices of Environment Management Unit (EMU) and the Project Facilities and Management Office (PFMO) of Batangas State University, The National Engineering University -  Alangilan Campus, which will help the university's growth in safety equipments as well as ensure that the safety equipments will can be used in times of emergencies or a catastrophes.
 
 # SDG
-The goal of SDG 17 is consistent with the value provided by global collaboration in encouraging the appropriate use and maintenance of safety equipment. 
+SDG 17's aim is aligned with the value offered by  collaboration in supporting the execution and maintenance of safety equipment. 
+Ultimately, through integrating SDG 17 into safety equipment, it recognizes that a comprehensive and coordinated plan must be developed for the safety of individuals as well as communities. This helps to the ultimate goal of sustainable development by establishing cooperation, mobilizing resources, stimulating technological advances, and ensuring accessible access to university safety equipment.
 
-In the end, by integrating SDG 17 to safety equipment, it is acknowledged that a thorough and collaborative strategy is necessary to protect people and communities. This contributes to the overarching objective of sustainable development by fortifying collaborations, mobilizing resources, fostering technical breakthroughs, and guaranteeing fair access to safety equipment in the university.
 
 
 
