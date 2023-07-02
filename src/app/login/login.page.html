@@ -1,33 +1,29 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
-<ion-content>
-  <div class="login-container">
-    <img class="img-d"  alt="bus" src="assets/bsu-a.png" />
-    <h1 class="ct-title" >EquipCheck</h1>
-    <ion-item>
-      <ion-label position="floating">Username</ion-label>
-      <ion-input type="text" [(ngModel)]="Username"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="Password"></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-          <input type="checkbox" id="remember-me" name="remember-me">
-          <label class="rmb" for="remember-me">Remember me</label>
-          <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-      </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-    <ion-button expand="block" color="primary" (click)="logMeIn()">Login</ion-button>
-  </ion-col>
-  </ion-row>
-  </div>
+<ion-content  class="bg-color">
+	<!-- <ion-img class="bg-color" src="assets/ecbg.png"></ion-img> -->
+	<div class="login-container">
+		
+		<img class="img-d"  alt="bus" src="assets/bsu-a.png" />
+		<h1 class="ct-title" >EquipCheck</h1>
+	<form (keydown.enter)="logMeIn()">
+		<ion-item lines="none" >
+			<ion-input class="input-user"   labelPlacement="stacked" [clearInput]="true" placeholder="Username" type="text" [(ngModel)]="Username" name="username" required></ion-input>
+		</ion-item>
+	
+		<ion-item lines="none" >
+			<ion-input class="input-pass"  labelPlacement="stacked" [clearInput]="true" placeholder="Password" type="password" [(ngModel)]="Password" name="password" required></ion-input>	
+		</ion-item>
+			<ion-row>
+				<ion-col>
+					<input type="checkbox" id="remember-me" name="remember-me">
+					<label class="rmb" for="remember-me">Remember me</label>
+					<a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<ion-button expand="block" (click)="logMeIn()">Login</ion-button>
+				</ion-col>
+			</ion-row>
+	</form>
+	</div>
 </ion-content>
