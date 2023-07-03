@@ -1,4 +1,4 @@
-
+<img src="/http://https://github.com/judeacamat/EquipCheck-Final.git/to/img.jpg" alt="Alt text" title="Optional title">
 ![bsu-bg](http://https://github.com/judeacamat/EquipCheck-Final.git/to/bg4.png)
 # EquipCheck: Safety Equipment Mapping and Maintenance Management System
 # Introduction
