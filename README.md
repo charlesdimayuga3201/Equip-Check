@@ -1,6 +1,15 @@
 
 ![bsu-bg](src/assets/bsu-a.png)
 
+<h3 align="center">A passionate frontend developer from India</h3>
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a> <a href="https://ionicframework.com" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" alt="ionic" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+
 # EquipCheck: Safety Equipment Mapping and Maintenance Management System
 # Introduction
 Nowadays, safety equipment is frequently disregarded given that people do not know how to utilize and maintain it properly. Because of this ignorance, safety equipment may not be used effectively as aimed for, which may result in accidents and emergencies. Accidents typically happen as a result of unawareness, a lack of common sense, a failure to follow directions, or mistakes made when doing studies. However, emergencies and catastrophes have the potential to occur at any time, therefore, it's important to be prepared to respond to these. Emergency situations and catastrophes can strike at any time. Therefore, it must take steps toward preventing such in order to ensure that to become prepared for everything by properly mapping the floorplan, maintaining and monitoring the safety equipment effectively, so that the safety equipment is accessible, functional, and ready to use in the event of a disaster. Because all of the safety equipment was properly monitored and operational, it must be vital for people and organizations to be knowledgeable to take measures more quickly and efficiently in order to minimize the possibility of harm and damage. Utilizing safety equipment like fire extinguishers, smoke detectors, and fire sprinklers can make it easier to prevent emergencies and deal with catastrophes. 
