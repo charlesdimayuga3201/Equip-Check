@@ -1,5 +1,5 @@
 
-![bsu-bg](http://https://github.com/EquipCheck-Final.git/src/assets/bg4.png)
+![bsu-bg](https://github.com/judeacamat/EquipCheck-Final.git/src/assets/bg4.png)
 
 # EquipCheck: Safety Equipment Mapping and Maintenance Management System
 # Introduction
