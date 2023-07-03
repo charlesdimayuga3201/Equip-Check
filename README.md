@@ -1,5 +1,5 @@
 
-![bsu-bg](bg4.png)
+![bsu-bg](src/assets/bsu-a.png)
 
 # EquipCheck: Safety Equipment Mapping and Maintenance Management System
 # Introduction
