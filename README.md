@@ -7,6 +7,26 @@ This feature greatly enhances operational efficiency. Moreover, the ability to e
 In essence, the implementation of this system will empower the Environmental Management Unit and Project Facility Management Office with a centralized management approach, ultimately benefiting the entire university community.
 
 # HOW TO RUN THE PROJECT
+Log in valid account credentials
+After loggin in, the access on the system would be depends on the account type.
+ If admin account is used, the user would be granted full access on functions and features of the system.
+ If staff account is used, the access on the system woul be limited.
+
+ Admin Account Access
+ • Update Roles
+ • Review All Equipment
+ • View Mapping
+ • Update Equipment
+ • View Records
+ • View Equipment
+ 
+ Staff Account Access
+  
+ • View Mapping
+ • Update Equipment
+ • View Records
+ • View Equipment
+ 
 
 
 
