@@ -2,7 +2,6 @@
 
 # EQUIPCHECK: Safety Equipment Mapping and Maintenance Management System
 
-![CH CK](https://github.com/charlesdimayuga3201/EquipCheck-Final/assets/136704929/a05215a7-8f97-4be4-ab73-d8e96da4da14)
 # WHAT THE PROJECT DOES
 The primary objective of this project is to achieve enhanced management of safety equipment, resulting in significant benefits for both the head admin, staff, and various offices mentioned, as well as fostering technological advancement throughout the campus. An integral component of this endeavor is the inclusion of a floorplan that allows for efficient mapping and identification of each safety equipment located within specific floors or buildings. 
 This feature greatly enhances operational efficiency. Moreover, the ability to easily assess the functionality of each safety equipment further adds to the advantages of this system. 
