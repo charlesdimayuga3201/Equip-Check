@@ -2,7 +2,9 @@
 
 # EQUIPCHECK: Safety Equipment Mapping and Maintenance Management System
 
-![bsu-bg](src/assets/readme.png)
+
+![readme1](https://github.com/charlesdimayuga3201/EquipCheck-Final/assets/136704929/41f751d2-fad5-4872-b42c-578c232d951a)
+
 # WHAT THE PROJECT DOES
 The primary objective of this project is to achieve enhanced management of safety equipment, resulting in significant benefits for both the head admin, staff, and various offices mentioned, as well as fostering technological advancement throughout the campus. An integral component of this endeavor is the inclusion of a floorplan that allows for efficient mapping and identification of each safety equipment located within specific floors or buildings. 
 This feature greatly enhances operational efficiency. Moreover, the ability to easily assess the functionality of each safety equipment further adds to the advantages of this system. 
