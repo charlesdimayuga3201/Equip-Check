@@ -47,7 +47,7 @@ This collaborative project was meticulously crafted and brought to life by an ex
 The brilliant minds behind its inception and development are Camat, Judea Hazel Mae, Cusi, Justine Carlo, and Dimayuga, Charles Keane. Each member of this talented group bears unique duties and responsibilities within the project.
 Judea Hazel Mae Camat demonstrates exemplary expertise in overall documentation and design, while Justine Carlo Cusi provides invaluable support in documentation and Charles Keane Dimayuga pivotal role in overseeing the comprehensive programming aspects of this remarkable undertaking.
 
-#References
+# References
 https://www.bigbeatinc.com/blog/do-you-think-physical-advertising-works
 https://www.penalreform.org/blog/public-opinion-barrier-to-death-penalty-abolition/
 https://www.ehow.com/info_8434535_extension-lines-technical-drawing.html?fbclid=IwAR0wZ1Fps0Wdxx5jkXtdwkPcD7k3tWHFERymDtKp4p_v5rh9yUkWdiS77X4
