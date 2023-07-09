@@ -9,106 +9,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">updates</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <!-- <ion-grid [fixed]="true">
-  <ion-row>
-    <ion-col>Safety Equipment</ion-col>
-    <ion-col> Buildings</ion-col>
-    <ion-col>Floors</ion-col>
-  </ion-row>
-</ion-grid> -->
 
+<ion-tabs>    
+  <ion-tab-bar slot="top" >
+    <ion-tab-button tab="u-fire-extinguisher" class="fire">
+      Fire Exinguisher
+    </ion-tab-button>
+    <ion-tab-button tab="u-smoke-detector" class="smoke">  
+      Smoke Detector
+    </ion-tab-button>
+    <ion-tab-button tab="u-sprinkler" class="sprinkler">
 
+      Sprinkler
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
 
-<ion-grid [fixed]="true">
-  <ion-row>
-    <!-- <ion-col >
-      <ion-list>
-        <ion-item>
-          <ion-select class="custom-select" placeholder="Equipment">
-            <ion-select-option value="Fire_Extinguisher">Fire Extinguisher</ion-select-option>
-            <ion-select-option value="Smoke_Detector">Smoke Detector</ion-select-option>
-            <ion-select-option value="Sprinkler">Sprinkler</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-col> -->
-    <ion-segment  [(ngModel)]="selectedSegment">
-      <ion-segment-button value="fire" checked>
-        <ion-label>Fire Extinguisher</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="smoke">
-        <ion-label>Smoke Detector</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="sprinkler">
-        <ion-label>Sprinkler</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-
-    <ion-col ><ion-list>
-      <ion-item>
-        <ion-select class="custom-select" label="" placeholder="">
-          <ion-select-option value="Fire_Extinguisher">E1</ion-select-option>
-          <ion-select-option value="Smoke_Detector">E2</ion-select-option>
-          <ion-select-option value="Sprinkler">E3</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list></ion-col>
-    <ion-col ><ion-item>
-      <ion-select class="custom-select1"  placeholder="Buildings">
-        <ion-select-option value="Fire_Extinguisher">Building A</ion-select-option>
-        <ion-select-option value="Smoke_Detector">Building B</ion-select-option>
-        <ion-select-option value="Sprinkler">Building C</ion-select-option>
-      </ion-select>
-    </ion-item></ion-col>
-    <ion-col ><ion-item>
-
-      <ion-select class="custom-select1"  placeholder="Floor">
-        <ion-select-option value="Fire_Extinguisher">1st Floor</ion-select-option>
-        <ion-select-option value="Smoke_Detector">2nd Floor</ion-select-option>
-        <ion-select-option value="Sprinkler">3rd Floor</ion-select-option>
-      </ion-select>
-    </ion-item></ion-col>
-  </ion-row>
-</ion-grid>
-
-
-
-<div>
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col >Remarks</ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col>Date</ion-col>
-      <ion-col>Time</ion-col>
-      <ion-col>Nozzle</ion-col>
-      <ion-col>Gauge</ion-col>
-      <ion-col>Pin/Lock</ion-col>
-      <ion-col>Body</ion-col>
-      <ion-col>Inspected By</ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col>06/26/2023</ion-col>
-      <ion-col>9:00 AM</ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked1"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked2"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked3"></ion-checkbox></ion-col>
-      <ion-col>Kc Dimayuga</ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
-
-<ion-button class="update-b" (click)="updateData()">Update</ion-button>
 
 </ion-content>
