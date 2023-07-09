@@ -1,4 +1,12 @@
+
 ![bsu-bg](src/assets/bsu-a.png)
+
+---
+# EquipCheck: Safety Equipment Mapping and Maintenance Management System
+---
+# Introduction
+---
+Nowadays, safety equipment is frequently disregarded given that people do not know how to utilize and maintain it properly. Because of this ignorance, safety equipment may not be used effectively as aimed for, which may result in accidents and emergencies. Accidents typically happen as a result of unawareness, a lack of common sense, a failure to follow directions, or mistakes made when doing studies. However, emergencies and catastrophes have the potential to occur at any time, therefore, it's important to be prepared to respond to these. Emergency situations and catastrophes can strike at any time. Therefore, it must take steps toward preventing such in order to ensure that to become prepared for everything by properly mapping the floorplan, maintaining and monitoring the safety equipment effectively, so that the safety equipment is accessible, functional, and ready to use in the event of a disaster. Because all of the safety equipment was properly monitored and operational, it must be vital for people and organizations to be knowledgeable to take measures more quickly and efficiently in order to minimize the possibility of harm and damage. Utilizing safety equipment like fire extinguishers, smoke detectors, and fire sprinklers can make it easier to prevent emergencies and deal with catastrophes. 
 
 # EQUIPCHECK: Safety Equipment Mapping and Maintenance Management System
 
@@ -10,27 +18,51 @@ This feature greatly enhances operational efficiency. Moreover, the ability to e
 In essence, the implementation of this system will empower the Environmental Management Unit and Project Facility Management Office with a centralized management approach, ultimately benefiting the entire university community.
 
 
+
+
 ![readme (2)](https://github.com/charlesdimayuga3201/EquipCheck-Final/assets/136704929/83409197-b3c6-4d29-91d2-669e5b7e325f)
 
+## Installation the application ##
+
+Step 1:  Download the installer for Node LTS 
+
+Step 2:  Install the ionic CLI globally: npm install -g ionic
+
+Step 3:  Clone repository: 
+
+Step 4: Run npm install from the project root
+
+Step 5: Run ionic serve in a terminal from project root
+
+**After Installation of the application,**
 
 Log in valid account credentials
 After loggin in, the access on the system would be depends on the account type.
  If admin account is used, the user would be granted full access on functions and features of the system.
- If staff account is used, the access on the system woul be limited.
+ If staff account is used, the access on the system would be limited.
 
- Admin Account Access
+## Admin Account Access ##
+ 
  • Update Roles
+ 
  • Review All Equipment
+ 
  • View Mapping
+ 
  • Update Equipment
+ 
  • View Records
+ 
  • View Equipment
  
- Staff Account Access
+## Staff Account Access ##
   
  • View Mapping
+ 
  • Update Equipment
+ 
  • View Records
+ 
  • View Equipment
  
 
