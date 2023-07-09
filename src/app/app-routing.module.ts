@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
+ 
+
+
 const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+
+  {
     path: '',
-    redirectTo: 'folder/Home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -22,7 +31,21 @@ const routes: Routes = [
   {
     path: 'update',
     loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
-  }
+  },
+  {
+    path: 'smoke-detector',
+    loadChildren: () => import('./smoke-detector/smoke-detector.module').then( m => m.SmokeDetectorPageModule)
+  },
+  {
+    path: 'sprinkler',
+    loadChildren: () => import('./sprinkler/sprinkler.module').then( m => m.SprinklerPageModule)
+  },
+  {
+    path: 'fire-extinguisher',
+    loadChildren: () => import('./fire-extinguisher/fire-extinguisher.module').then( m => m.FireExtinguisherPageModule)
+  },
+  
+
 ];
 
 @NgModule({

@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { ViewChild } from '@angular/core';
+import { NavController } from '@ionic/angular';
 @Component({
-  selector: 'app-view',
-  templateUrl: './view.page.html',
-  styleUrls: ['./view.page.scss'],
+  selector: 'app-fire-extinguisher',
+  templateUrl: './fire-extinguisher.page.html',
+  styleUrls: ['./fire-extinguisher.page.scss'],
 })
-export class ViewPage implements OnInit {
-@ViewChild('roundButton', { static: true }) roundButton: any;
+export class FireExtinguisherPage implements OnInit {
 
   
+  FE!:string;
+  FE1!:string;
+  FE2!:string;
+  selectedOption!: string ;
+  selectedOption1!: string;
+  selectedOption2!: string;
+  selectedSegment!: string;
+  selectedSegment1!: string;
   // updateContent() {
   //   // Clear the content when the segment changes
   //   // You can modify this function to perform any other necessary updates
@@ -21,11 +27,10 @@ export class ViewPage implements OnInit {
   //   }
     
   // }
- 
+
 
   ngOnInit() {
   }
-
   constructor(private router: Router) { }
   FireExtinguisher(){
     this.router.navigate(['/fire-extinguisher']);
@@ -37,5 +42,6 @@ export class ViewPage implements OnInit {
     this.router.navigate(['/sprinkler']);
   
 }
+
 
 }

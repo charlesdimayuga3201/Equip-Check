@@ -14,6 +14,10 @@ import { Component, OnInit } from '@angular/core';
 
 // }
 export class UpdatePage{
+
+
+  selectedSegment: string = 'fire';
+ 
   isChecked: boolean = false;
   isChecked1: boolean = false;
   isChecked2: boolean = false;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -15,4 +16,10 @@ export class AppComponent {
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   // constructor() {}
+  constructor(private router: Router) {}
+
+  shouldShowMenu() {
+    // Check the current route and conditionally show/hide the menu
+    return this.router.url !== '/login';
+  }
 }

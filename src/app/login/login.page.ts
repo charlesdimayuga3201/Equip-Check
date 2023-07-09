@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,17 @@ export class LoginPage {
   Username!: string;
   Password!: string;
 
-  constructor(private router: Router, private alertController: AlertController) {}
+  constructor(private router: Router, private alertController: AlertController, private menuController: MenuController) {}
+  
 
+  ngOnInit() {
+    // Remove the following line or comment it out
+    this.menuController.enable(true);
+  }
   async logMeIn() {
     if (this.Username === 'admin' && this.Password === '1234') {
       // Redirect to home page
-      this.router.navigate(['home']);
+      this.router.navigate(['/mapping']);
     } else {
       // Show error message for invalid credentials
       await this.showAlert('Invalid Credentials', 'Please enter valid username and password.');

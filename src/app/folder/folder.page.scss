@@ -26,3 +26,21 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+.side-menu-class {
+  /* Styles for non-mobile devices */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .side-menu-class {
+    /* Reset styles for mobile devices */
+    position: static;
+    top: auto;
+    left: auto;
+    height: auto;
+  }
+}
