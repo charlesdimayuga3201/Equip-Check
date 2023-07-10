@@ -1,5 +1,11 @@
+// .eq-bg  {
+//   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+//   // border-bottom-right-radius: 3em;
+//   // border-bottom-left-radius: 3em;
+//   border-radius: 1em;
+// }
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-item-background, var(--ion-background-color, #ffffff));
 }
 
 ion-menu.md ion-content {
@@ -22,9 +28,9 @@ ion-menu.md ion-note {
   padding-left: 10px;
 }
 
-ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
-}
+// ion-menu.md ion-list#inbox-list {
+//   border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+// }
 
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
@@ -38,7 +44,7 @@ ion-menu.md ion-list#labels-list ion-list-header {
 
   margin-bottom: 18px;
 
-  color: #757575;
+  color: #f17575;
 
   min-height: 26px;
 }
@@ -50,15 +56,15 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background: rgba(#f17575, 0.14);
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: #f17575;
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: #454545;
 }
 
 ion-menu.md ion-item ion-label {
@@ -85,12 +91,12 @@ ion-menu.ios ion-item {
 }
 
 ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: #f17575;
 }
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #454545
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {
@@ -111,9 +117,53 @@ ion-note {
   display: inline-block;
   font-size: 16px;
 
-  color: var(--ion-color-medium-shade);
+  color: #f17575;
 }
 
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: #f17575;
+}
+ion-avatar{
+  width:100% !important;  
+height : 100% !important;  
+max-width: 100px !important;  //any size
+max-height: 100px !important; //any size 
+}
+ion-note{
+  display: flex;
+  padding-top: 1em;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  display: flex;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 12px 60px;
+  align-items: center;
+  justify-content: center;
+}
+.profile-custom{
+  
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+}
+ion-content {
+  --background: url('/assets/menu-bg.jpg')no-repeat center center;
+  --background-size: contain;
+  --max-width: fit-content;
+  --background-repeat:no-repeat;
+  --background-size: 100% 100%;
+  --background-attachment: fixed;
+
+
+
+}
+.side-menu-class{
+ 
+    --background:#eacccc ;
+
 }

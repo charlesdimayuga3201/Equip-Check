@@ -20,11 +20,20 @@ const routes: Routes = [
         path: 'u-sprinkler',
         loadChildren: () => import('../u-sprinkler/u-sprinkler.module').then( m => m.USprinklerPageModule)
       },
-  
+      {
+        path: '',
+        redirectTo: '/update/u-fire-extinguisher',
+        pathMatch: 'full'
+      },
       
     ]
-    
-  }
+  },
+    {
+      path: '',
+      redirectTo: '/update/u-fire-extinguisher',
+      pathMatch: 'full'
+    },
+  
 ];
 
 @NgModule({
