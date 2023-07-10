@@ -18,27 +18,51 @@ This feature greatly enhances operational efficiency. Moreover, the ability to e
 In essence, the implementation of this system will empower the Environmental Management Unit and Project Facility Management Office with a centralized management approach, ultimately benefiting the entire university community.
 
 
+
+
 ![readme (2)](https://github.com/charlesdimayuga3201/EquipCheck-Final/assets/136704929/83409197-b3c6-4d29-91d2-669e5b7e325f)
 
+## Installation the application ##
+
+Step 1:  Download the installer for Node LTS 
+
+Step 2:  Install the ionic CLI globally: npm install -g ionic
+
+Step 3:  Clone repository: 
+
+Step 4: Run npm install from the project root
+
+Step 5: Run ionic serve in a terminal from project root
+
+**After Installation of the application,**
 
 Log in valid account credentials
 After loggin in, the access on the system would be depends on the account type.
  If admin account is used, the user would be granted full access on functions and features of the system.
- If staff account is used, the access on the system woul be limited.
+ If staff account is used, the access on the system would be limited.
 
- Admin Account Access
+## Admin Account Access ##
+ 
  • Update Roles
+ 
  • Review All Equipment
+ 
  • View Mapping
+ 
  • Update Equipment
+ 
  • View Records
+ 
  • View Equipment
  
- Staff Account Access
+## Staff Account Access ##
   
  • View Mapping
+ 
  • Update Equipment
+ 
  • View Records
+ 
  • View Equipment
  
 

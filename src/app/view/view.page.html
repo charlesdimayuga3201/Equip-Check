@@ -1,0 +1,37 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>View Safety Equipment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!-- <ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col>Safety Equipment</ion-col>
+    <ion-col> Buildings</ion-col>
+    <ion-col>Floors</ion-col>
+  </ion-row>
+</ion-grid> -->
+
+
+<ion-tabs>    
+  <ion-tab-bar slot="top" >
+    <ion-tab-button tab="fire-extinguisher" class="fire">
+      Fire Exinguisher
+    </ion-tab-button>
+    <ion-tab-button tab="smoke-detector" class="smoke">  
+      Smoke Detector
+    </ion-tab-button>
+    <ion-tab-button tab="sprinkler" class="sprinkler">
+
+      Sprinkler
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+</ion-content>
