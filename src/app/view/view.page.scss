@@ -1,3 +1,8 @@
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
 ion-col {
     // background-color: #135d54;
     // border: solid 1px #fff;
@@ -10,7 +15,17 @@ ion-col {
     padding-top: 10px;
     padding-bottom: 50px;
   }
-
+ion-header{
+  // --background: url('/assets/ecbg7.png')no-repeat center center;
+  //   --background-size: contain;
+  //   --max-width: fit-content;
+  //   --background-repeat:no-repeat;
+  //   --background-size: 100% 100%;
+  //   --background-attachment: fixed;
+  // --background: #ff9c9c;
+    box-shadow: none;
+ 
+}
  
   .custom-select{
     height: 1%;
@@ -28,7 +43,7 @@ ion-col {
   
   /* Material Design styles */
   ion-segment-button.md::part(native) {
-    color: #000;
+    color: #000000;
   }
   
   .segment-button-checked.md::part(native) {
@@ -62,7 +77,9 @@ ion-col {
   //   display: none;
   // }
   ion-tabs{
-    margin-top: 6vh;
+    margin-top: 7vh;
+
+    
   }
 //   .fire{
 //     margin-right: 19em;
@@ -73,3 +90,9 @@ ion-col {
 //  .sprinkler{
 //     margin-left:5em
 //  }
+// ion-tab-button{
+  
+//   margin-left: 6em;
+
+// }
+

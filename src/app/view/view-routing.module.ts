@@ -23,10 +23,18 @@ const routes: Routes = [
       loadChildren: () => import('../sprinkler/sprinkler.module').then( m => m.SprinklerPageModule)
     },
 
-    
+    {
+      path: '',
+      redirectTo: '/view/fire-extinguisher',
+      pathMatch: 'full'
+    },
   ]
   },
-
+  {
+    path: '',
+    redirectTo: '/view/fire-extinguisher',
+    pathMatch: 'full'
+  }
 
   
 

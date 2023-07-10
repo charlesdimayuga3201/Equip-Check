@@ -55,7 +55,15 @@ const routes: Routes = [
   {
     path: 'u-sprinkler',
     loadChildren: () => import('./u-sprinkler/u-sprinkler.module').then( m => m.USprinklerPageModule)
+  },  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
   },
+  {
+    path: 'h-fire-extinguisher',
+    loadChildren: () => import('./h-fire-extinguisher/h-fire-extinguisher.module').then( m => m.HFireExtinguisherPageModule)
+  },
+
 
   
 
