@@ -2,11 +2,7 @@
 
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">view</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
   <!-- <ion-grid [fixed]="true">
   <ion-row>
     <ion-col>Safety Equipment</ion-col>
@@ -14,12 +10,19 @@
     <ion-col>Floors</ion-col>
   </ion-row>
 </ion-grid> -->
-
+<div class="design2">
+  <img src="/assets/form3.png" alt="">
+</div>
+<div class="design1">
+  <img src="/assets/form2.png" alt="">
+</div>
 
 <div class="img-custom">
 <img class ="bg"src="/assets/fe.png" alt="">
 </div>
+
 <ion-grid [fixed]="true"  id="mySelect">
+
   <ion-row>
     <!-- <ion-col >
       <ion-list>
@@ -35,31 +38,39 @@
     
 
     <ion-col>
+      <ion-list>
         <ion-item lines ="none">
-        <ion-select   [(ngModel)]="selectedOption" class="custom-select" placeholder="Equipment">
-          <ion-select-option  value="fire">E1</ion-select-option>
-          <ion-select-option value="fire1">E2</ion-select-option>
-          <ion-select-option value="fire2" >E3</ion-select-option>
+        <ion-select   [(ngModel)]="selectedOption"  class="custom-select" placeholder="Select Equipment" interface="popover" fill="outline">
+          <ion-select-option  value="fire">FE1</ion-select-option>
+          <ion-select-option value="fire1">FE2</ion-select-option>
+          <ion-select-option value="fire2" >FE3</ion-select-option>
         </ion-select>
       </ion-item>
+    </ion-list>
   </ion-col>
 
-    <ion-col><ion-item lines ="none" >
-      <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Buildings">
+    <ion-col>
+      <ion-list>
+      <ion-item lines ="none" >
+      <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
         <ion-select-option  value="fire">CICS</ion-select-option>
         <ion-select-option  value="fire1">CEAFA</ion-select-option>
         <ion-select-option  value="fire2">CIT</ion-select-option>
       </ion-select>
-    </ion-item></ion-col>
+    </ion-item>
+  </ion-list>
+</ion-col>
 
     <ion-col>
+      <ion-list>
       <ion-item lines ="none">
-      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"   placeholder="Floor">
+      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
         <ion-select-option  value="fire">1st Floor</ion-select-option>
         <ion-select-option  value="fire1">2nd Floor</ion-select-option>
         <ion-select-option  value="fire2">3rd Floor</ion-select-option>
       </ion-select>
       </ion-item>
+    </ion-list>
     </ion-col>
   </ion-row>
 </ion-grid>
