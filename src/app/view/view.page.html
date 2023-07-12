@@ -1,38 +1,45 @@
 
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>View Safety Equipment</ion-title>
+    <!-- <ion-title>View Safety Equipment</ion-title> -->
+    
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  
-  <!-- <ion-grid [fixed]="true">
-  <ion-row>
-    <ion-col>Safety Equipment</ion-col>
-    <ion-col> Buildings</ion-col>
-    <ion-col>Floors</ion-col>
-  </ion-row>
-</ion-grid> -->
-
-
-<ion-tabs class="custom-tabs">    
+<ion-content [fullscreen]="true" scrollY="false">
+ 
+<ion-tabs align = "center" class="custom-tabs">    
   <ion-tab-bar slot="top" >
-    <ion-tab-button tab="fire-extinguisher" class="fire">
-      Fire Exinguisher
+    <ion-tab-button tab="fire-extinguisher" class="fire" >
+      <div>
+      <img class="tab-img" src="/assets/se-fe.png" alt="">
+      <ion-icon name="radio-button-on-outline"></ion-icon>
+      </div>
+
+      <!-- <p>Fire Exinguisher</p> -->
     </ion-tab-button>
     <ion-tab-button tab="smoke-detector" class="smoke">  
-      Smoke Detector
+      <div>
+      <img class="tab-img" src="/assets/se-sd.png" alt="">
+      <ion-icon name="radio-button-on-outline"></ion-icon>
+      </div>
+  
+      <!-- <p>Smoke Detector</p> -->
     </ion-tab-button>
     <ion-tab-button tab="sprinkler" class="sprinkler">
-      Sprinkler
+      <div>
+      <img  class="tab-img"src="/assets/se-s.png" alt="">
+       <ion-icon name="radio-button-on-outline"></ion-icon>
+      </div>
+     
+      <!-- <p>Sprinkler</p> -->
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
-
 <!-- <ion-tabs class="custom-tabs">    
   <ion-tab-bar slot="top" >
     <ion-tab-button tab="fire-extinguisher" class="fire">
@@ -46,6 +53,17 @@
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs> -->
-
-
 </ion-content>
+<script>document.addEventListener('ionTabsDidChange', (event) => {
+  const selectedTab = event.detail.tab;
+
+  // Remove 'selected' class from all tab buttons
+  const tabButtons = document.querySelectorAll('.custom-tab');
+  tabButtons.forEach((tabButton) => {
+    tabButton.classList.remove('selected');
+  });
+
+  // Add 'selected' class to the selected tab button
+  const selectedTabButton = document.querySelector(`.custom-tab[tab="${selectedTab}"]`);
+  selectedTabButton.classList.add('selected');
+});</script>

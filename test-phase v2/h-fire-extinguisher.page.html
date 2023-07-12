@@ -1,0 +1,290 @@
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">view</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- <ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col>Safety Equipment</ion-col>
+    <ion-col> Buildings</ion-col>
+    <ion-col>Floors</ion-col>
+  </ion-row>
+</ion-grid> -->
+
+
+<div class="img-custom">
+<img class ="bg"src="/assets/fe.png" alt="">
+</div>
+<ion-grid [fixed]="true"  id="mySelect">
+  <ion-row>
+    <!-- <ion-col >
+      <ion-list>
+        <ion-item>
+          <ion-select class="custom-select" placeholder="Equipment">
+            <ion-select-option value="Fire_Extinguisher">Fire Extinguisher</ion-select-option>
+            <ion-select-option value="Smoke_Detector">Smoke Detector</ion-select-option>
+            <ion-select-option value="Sprinkler">Sprinkler</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-col> -->
+    
+
+    <ion-col>
+        <ion-item lines ="none">
+        <ion-select   [(ngModel)]="selectedOption" class="custom-select" placeholder="Equipment">
+          <ion-select-option  value="fire">E1</ion-select-option>
+          <ion-select-option value="fire1">E2</ion-select-option>
+          <ion-select-option value="fire2" >E3</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-col>
+
+    <ion-col><ion-item lines ="none" >
+      <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Buildings">
+        <ion-select-option  value="fire">CICS</ion-select-option>
+        <ion-select-option  value="fire1">CEAFA</ion-select-option>
+        <ion-select-option  value="fire2">CIT</ion-select-option>
+      </ion-select>
+    </ion-item></ion-col>
+
+    <ion-col>
+      <ion-item lines ="none">
+      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"   placeholder="Floor">
+        <ion-select-option  value="fire">1st Floor</ion-select-option>
+        <ion-select-option  value="fire1">2nd Floor</ion-select-option>
+        <ion-select-option  value="fire2">3rd Floor</ion-select-option>
+      </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/26/2023</ion-col>
+      <ion-col>9:00 AM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/25/2023</ion-col>
+      <ion-col>10:00 AM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/22/2023</ion-col>
+      <ion-col>5:00 AM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/21/2023</ion-col>
+      <ion-col>2:00 PM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/20/2023</ion-col>
+      <ion-col>10:00 AM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+
+
+
+<div class = "content" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire1' && selectedOption2  === 'fire1' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/27/2023</ion-col>
+      <ion-col>10:00 AM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div class = "content" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire2' && selectedOption2  === 'fire2' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>06/28/2023</ion-col>
+      <ion-col>11:00 AM</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+</ion-content>
+
+

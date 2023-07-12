@@ -10,7 +10,9 @@ ion-content {
 
 }
 
-
+ion-button{
+  color: rgb(248, 247, 247);
+}
   .login-container {
     text-align: center;
 
@@ -20,7 +22,7 @@ ion-content {
     top: 50%;
     transform: translateY(-50%);
   
-    max-width: 320px;
+    max-width:20rem;
     margin: 0 auto;
     padding: 20px ;
     background-color:  #fcf7f5;

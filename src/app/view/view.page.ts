@@ -22,7 +22,7 @@ export class ViewPage implements OnInit {
     
   // }
  
-
+  selectedTab: string = 'fire-extinguisher';
   ngOnInit() {
   }
 
