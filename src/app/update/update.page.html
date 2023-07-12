@@ -4,23 +4,37 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Updates</ion-title>
+    <!-- <ion-title>Updates</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-<ion-tabs>    
+ 
+<ion-tabs align = "center" class="custom-tabs">    
   <ion-tab-bar slot="top" >
     <ion-tab-button tab="u-fire-extinguisher" class="fire">
-      Fire Exinguisher
+      <div>
+      <img class="tab-img" src="/assets/se-fe.png" alt="">
+      <ion-icon name="radio-button-on-outline"></ion-icon>
+      </div>
+
+      <!-- <p>Fire Exinguisher</p> -->
     </ion-tab-button>
     <ion-tab-button tab="u-smoke-detector" class="smoke">  
-      Smoke Detector
+      <div>
+      <img class="tab-img" src="/assets/se-sd.png" alt="">
+      <ion-icon name="radio-button-on-outline"></ion-icon>
+      </div>
+  
+      <!-- <p>Smoke Detector</p> -->
     </ion-tab-button>
     <ion-tab-button tab="u-sprinkler" class="sprinkler">
-
-      Sprinkler
+      <div>
+      <img  class="tab-img"src="/assets/se-s.png" alt="">
+       <ion-icon name="radio-button-on-outline"></ion-icon>
+      </div>
+     
+      <!-- <p>Sprinkler</p> -->
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

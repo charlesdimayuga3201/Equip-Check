@@ -14,7 +14,7 @@
  
 <ion-tabs align = "center" class="custom-tabs">    
   <ion-tab-bar slot="top" >
-    <ion-tab-button tab="fire-extinguisher" class="fire">
+    <ion-tab-button tab="fire-extinguisher" class="fire" >
       <div>
       <img class="tab-img" src="/assets/se-fe.png" alt="">
       <ion-icon name="radio-button-on-outline"></ion-icon>
@@ -54,3 +54,16 @@
   </ion-tab-bar>
 </ion-tabs> -->
 </ion-content>
+<script>document.addEventListener('ionTabsDidChange', (event) => {
+  const selectedTab = event.detail.tab;
+
+  // Remove 'selected' class from all tab buttons
+  const tabButtons = document.querySelectorAll('.custom-tab');
+  tabButtons.forEach((tabButton) => {
+    tabButton.classList.remove('selected');
+  });
+
+  // Add 'selected' class to the selected tab button
+  const selectedTabButton = document.querySelector(`.custom-tab[tab="${selectedTab}"]`);
+  selectedTabButton.classList.add('selected');
+});</script>

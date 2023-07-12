@@ -157,12 +157,24 @@ ion-icon{
 }
 
 
-
-ion-tab-bar ion-tab-button.selected {
-  background: #ff5f5f;
- 
+.custom-tab.selected{
+  background-color:#ff5f5f ;
 }
+// ion-tab-button:active {
+//   background: #ff5f5f !important;
+//   border-radius: 23px;
+ 
+// }
 ion-content{
   
   height: 20%;
+}
+.content-sec{
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid;
 }
