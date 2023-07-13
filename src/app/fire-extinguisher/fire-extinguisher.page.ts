@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { DataService} from '../service/data.service';
+import { Firestore , collectionData, docData,  collection, doc, addDoc} from '@angular/fire/firestore';
+import { Observable} from 'rxjs';
+
 @Component({
   selector: 'app-fire-extinguisher',
   templateUrl: './fire-extinguisher.page.html',
@@ -31,17 +35,68 @@ export class FireExtinguisherPage implements OnInit {
 
   ngOnInit() {
   }
-  constructor(private router: Router) { }
-  FireExtinguisher(){
-    this.router.navigate(['/fire-extinguisher']);
-    }
-  SmokeDetector(){
-  this.router.navigate(['/smoke-detector']);
-  }
-  sprinkler(){
-    this.router.navigate(['/sprinkler']);
+//   constructor(private router: Router) { }
+//   FireExtinguisher(){
+//     this.router.navigate(['/fire-extinguisher']);
+//     }
+//   SmokeDetector(){
+//   this.router.navigate(['/smoke-detector']);
+//   }
+//   sprinkler(){
+//     this.router.navigate(['/sprinkler']);
   
+// }
+  
+view1: any = [];
+view2: any = [];
+view3: any = [];
+
+constructor( private dataService: DataService) { 
+  this.dataService.getE1().subscribe(res =>{
+    console.log(res); 
+    this.view1 = res;
+  })
+
+  this.dataService.getE2().subscribe(res =>{
+    console.log(res); 
+    this.view2 = res;
+  })
+
+  this.dataService.getE3().subscribe(res =>{
+    console.log(res); 
+    this.view3 = res;
+  })
 }
 
+
+}
+export interface E1{
+  id?: string;
+  body: string;
+  date: string;
+  gauge: string;
+  nozzle: string;
+  pinlock: string;
+  inspected:string;
+
+}
+export interface E2{
+  id?: string;
+  body: string;
+  date: string;
+  gauge: string;
+  nozzle: string;
+  pinlock: string;
+  inspected:string;
+
+}
+export interface E3{
+  id?: string;
+  body: string;
+  date: string;
+  gauge: string;
+  nozzle: string;
+  pinlock: string;
+  inspected:string;
 
 }

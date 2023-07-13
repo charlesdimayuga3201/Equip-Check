@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-u-fire-extinguisher',
   templateUrl: './u-fire-extinguisher.page.html',
@@ -21,7 +21,10 @@ export class UFireExtinguisherPage implements OnInit {
   isChecked1: boolean = false;
   isChecked2: boolean = false;
   isChecked3: boolean = false;
-  constructor() { }
+
+  currentTime: string | undefined;
+  currentDate: string | undefined;
+  constructor(private platform: Platform) { }
   clearSelection() {
     this.isChecked = false;
   }
@@ -30,8 +33,32 @@ export class UFireExtinguisherPage implements OnInit {
     // Perform the update action
     console.log('Data updated!');
   }
+  getCurrentDate() {
+    const currentDate = new Date();
+    this.currentDate = currentDate.toDateString();
+  }
   
+  getCurrentTime() {
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    
+    let updatedHours = hours;
+    let meridiem = 'AM';
+
+    if (updatedHours > 12) {
+      updatedHours -= 12;
+      meridiem = 'PM';
+    }
+  
+    return `${updatedHours}:${minutes} ${meridiem}`;
+  }
+  getUpdatedTime() {
+    this.currentTime = this.getCurrentTime();
+  }
   ngOnInit() {
+     this.getCurrentDate();
+     this.getUpdatedTime();
   }
 
 }

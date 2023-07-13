@@ -80,197 +80,104 @@
 
 
 <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
-  <table class="ion-table">
-  <thead align="center">
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>Remarks</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Nozzle</th>
-      <th>Gauge</th>
-      <th>Pin Lock</th>
-      <th>Body</th>
-      <th>Inspected By</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>06/26/2023</td>
-      <td>9:00 AM</td>
-      <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-      </td>
-      <td>
-        <ion-radio-group value="start" line ="none">
-          <ion-item>
-            <ion-radio value="start" justify="start"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </td>
-      <td>
-        <ion-radio-group value="start" line ="none">
-          <ion-item>
-            <ion-radio value="start" justify="start"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </td>
-      <td>
-        <ion-radio-group value="start" line ="none">
-          <ion-item>
-            <ion-radio value="start" justify="start"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </td>
-      <td>Kc Dimayuga</td>
-      
-    </tr>
-    <!-- Add more rows as needed -->
-  </tbody>
-  </table>
+  <ion-grid fixed >
+    <ion-row >
+   
+      <ion-col class="header" >Remarks</ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid> 
+    <ion-row *ngFor="let E1 of view1">
+      <ion-col>{{E1.date}}</ion-col>
+      <ion-col>{{E1.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>{{E1.inspected}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
 
-<div class = "content" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire1' && selectedOption2  === 'fire1' ">
-  <table class="ion-table">
-    <thead align="center">
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>Remarks</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Nozzle</th>
-        <th>Gauge</th>
-        <th>Pin Lock</th>
-        <th>Body</th>
-        <th>Inspected By</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>06/27/2023</td>
-        <td>10:00 AM</td>
-        <td>
-            <ion-radio-group value="start" line ="none">
-              <ion-item>
-                <ion-radio value="start" justify="start"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>Kc Dimayuga</td>
-        
-      </tr>
-      <!-- Add more rows as needed -->
-    </tbody>
-    </table>
 
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col  class="header">Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row *ngFor="let E2 of view2">
+      <ion-col>{{E2.date}}</ion-col>
+      <ion-col>{{E2.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>{{E2.inspected}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
 
-<div class = "content" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire2' && selectedOption2  === 'fire2' ">
-  <table class="ion-table">
-    <thead align="center">
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>Remarks</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Nozzle</th>
-        <th>Gauge</th>
-        <th>Pin Lock</th>
-        <th>Body</th>
-        <th>Inspected By</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>06/28/2023</td>
-        <td>11:00 AM</td>
-        <td>
-            <ion-radio-group value="start" line ="none">
-              <ion-item>
-                <ion-radio value="start" justify="start"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>Kc Dimayuga</td>
-        
-      </tr>
-      <!-- Add more rows as needed -->
-    </tbody>
-    </table>
+
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row *ngFor="let E3 of view3">
+      <ion-col>{{E3.date}}</ion-col>
+      <ion-col>{{E3.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>{{E3.inspected}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
+
 
 </ion-content>
 
