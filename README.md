@@ -22,13 +22,13 @@ In essence, the implementation of this system will empower the Environmental Man
 
 ![readme (2)](https://github.com/charlesdimayuga3201/EquipCheck-Final/assets/136704929/83409197-b3c6-4d29-91d2-669e5b7e325f)
 
-## Installation the application ##
+## Installation of the application ##
 
 Step 1:  Download the installer for Node LTS 
 
 Step 2:  Install the ionic CLI globally: npm install -g ionic
 
-Step 3:  Clone repository: 
+Step 3:  Clone repository: https://github.com/charlesdimayuga3201/EquipCheck-Final.git
 
 Step 4: Run npm install from the project root
 
