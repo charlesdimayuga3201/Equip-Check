@@ -5,6 +5,9 @@
 .highlight{
   background: #e9e8e8;
 }
+ion-col{
+  
+}
 // .content-sec ion-col {
 //   // background-color: #135d54;
 //   // border: solid 1px #fff;
@@ -209,4 +212,14 @@ th{
 }
 tr{
   margin-left: 50px;
+}
+.even-item {
+  background-color: #ffffff; /* Specify your desired background color */
+}
+
+.odd-item {
+  background-color:  #e9e8e8; /* Specify your desired background color */
+}
+.alternate-row {
+  background-color: #e9e8e8;
 }

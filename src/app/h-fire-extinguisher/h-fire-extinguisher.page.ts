@@ -17,7 +17,7 @@ export class HFireExtinguisherPage implements OnInit {
   selectedSegment!: string;
   selectedSegment1!: string;
  
-
+  items: any[] = [];
   ngOnInit() {
   }
   view: any = [];

@@ -4,6 +4,8 @@ import { NavController } from '@ionic/angular';
 import { DataService} from '../service/data.service';
 import { Firestore , collectionData, docData,  collection, doc, addDoc} from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-fire-extinguisher',
@@ -47,11 +49,15 @@ export class FireExtinguisherPage implements OnInit {
   
 // }
   
+// itemId = 'E1';
+// item$: Observable<any>;
 view1: any = [];
 view2: any = [];
 view3: any = [];
 
 constructor( private dataService: DataService) { 
+  // this.item$ = this.firestore.doc(`items/${this.itemId}`).valueChanges();
+  
   this.dataService.getE1().subscribe(res =>{
     console.log(res); 
     this.view1 = res;
