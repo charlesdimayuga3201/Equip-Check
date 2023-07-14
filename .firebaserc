@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "testing-33bc7": {
+      "hosting": {
+        "app": [
+          "testing-33bc7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "testing-33bc7"
+  }
+}

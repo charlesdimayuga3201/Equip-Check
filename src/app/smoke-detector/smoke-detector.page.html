@@ -77,108 +77,80 @@
 
 
 <div class = "content-sec" *ngIf="selectedOption === 'smoke' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke' ">
-  <table class="ion-table">
-    <thead align="center">
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>Remarks</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Power Source</th>
-        <th>Smoke Sensor</th>
-        <th>Sound</th>
-        <th>Capacity</th>
-        <th>Inspected By</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>06/28/2023</td>
-        <td>11:00 AM</td>
-        <td>
-            <ion-radio-group value="start" line ="none">
-              <ion-item>
-                <ion-radio value="start" justify="start"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>
-          <ion-radio-group value="start" line ="none">
-            <ion-item>
-              <ion-radio value="start" justify="start"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </td>
-        <td>
-          03/20/2028
-        </td>
-        <td>Kc Dimayuga</td>
-        
-      </tr>
-      <!-- Add more rows as needed -->
-    </tbody>
-    </table>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="header" >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Power Source</ion-col>
+      <ion-col>Smoke Sensor</ion-col>
+      <ion-col>Sound</ion-col>
+      <ion-col>Capacity</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row *ngFor="let SD1 of view1">
+      <ion-col>{{SD1.date}}</ion-col>
+      <ion-col>{{SD1.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
+      <ion-col>{{SD1.capacity}}</ion-col>
+      <ion-col>{{SD1.inspected}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
 
 <div class = "content-sec" *ngIf="selectedOption === 'smoke1' && selectedOption1 === 'smoke1' && selectedOption2  === 'smoke1' ">
   <ion-grid fixed>
     <ion-row>
-      <ion-col >Remarks</ion-col>
+      <ion-col class="header" >Remarks</ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
-    <ion-row>
+  <ion-grid class="highlight">
+    <ion-row class="header">
       <ion-col>Date</ion-col>
       <ion-col>Time</ion-col>
       <ion-col>Power Source</ion-col>
-      <ion-col>Smoker Sensor</ion-col>
+      <ion-col>Smoke Sensor</ion-col>
       <ion-col>Sound</ion-col>
       <ion-col>Capacity</ion-col>
       <ion-col>Inspected By</ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>06/27/2023</ion-col>
-      <ion-col>10:00 AM</ion-col>
+  <ion-grid >
+    <ion-row *ngFor="let SD2 of view2">
+      <ion-col>{{SD2.date}}</ion-col>
+      <ion-col>{{SD2.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
-      <ion-col>03/24/2028</ion-col>
-      <ion-col>Kc Dimayuga</ion-col>
+      <ion-col>{{SD2.capacity}}</ion-col>
+      <ion-col>{{SD2.inspected}}</ion-col>
     </ion-row>
   </ion-grid>
 </div>
 
-<div class = "conten-sec" *ngIf="selectedOption === 'smoke2' && selectedOption1 === 'smoke2' && selectedOption2  === 'smoke2' ">
+
+<div class = "content-sec" *ngIf="selectedOption === 'smoke2' && selectedOption1 === 'smoke2' && selectedOption2  === 'smoke2' ">
   <ion-grid fixed>
     <ion-row>
-      <ion-col >Remarks</ion-col>
+      <ion-col class="header" >Remarks</ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
-    <ion-row>
+  <ion-grid class="highlight">
+    <ion-row class="header">
       <ion-col>Date</ion-col>
       <ion-col>Time</ion-col>
       <ion-col>Power Source</ion-col>
-      <ion-col>Smoker Sensor</ion-col>
+      <ion-col>Smoke Sensor</ion-col>
       <ion-col>Sound</ion-col>
       <ion-col>Capacity</ion-col>
       <ion-col>Inspected By</ion-col>
@@ -186,18 +158,17 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row>
-      <ion-col>06/28/2023</ion-col>
-      <ion-col>11:00 AM</ion-col>
+    <ion-row *ngFor="let SD3 of view3">
+      <ion-col>{{SD3.date}}</ion-col>
+      <ion-col>{{SD3.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
-      <ion-col>03/24/2028</ion-col>
-      <ion-col>Kc Dimayuga</ion-col>
+      <ion-col>{{SD3.capacity}}</ion-col>
+      <ion-col>{{SD3.inspected}}</ion-col>
     </ion-row>
   </ion-grid>
 </div>
-
 </ion-content>
 
 

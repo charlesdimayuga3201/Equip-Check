@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService} from '../service/data.service';
+import { Firestore , collectionData, docData,  collection, doc, addDoc} from '@angular/fire/firestore';
+import { Observable} from 'rxjs';
 
 @Component({
   selector: 'app-smoke-detector',
@@ -28,9 +31,65 @@ export class SmokeDetectorPage implements OnInit {
 
 
 
-  constructor() { }
+
 
   ngOnInit() {
   }
-
-}
+  
+  view1: any = [];
+  view2: any = [];
+  view3: any = [];
+  
+  constructor( private dataService: DataService) { 
+    this.dataService.getSD1().subscribe(res =>{
+      console.log(res); 
+      this.view1 = res;
+    })
+  
+    this.dataService.getSD2().subscribe(res =>{
+      console.log(res); 
+      this.view2 = res;
+    })
+  
+    this.dataService.getSD3().subscribe(res =>{
+      console.log(res); 
+      this.view3 = res;
+    })
+  }
+  
+  
+  }
+  export interface SD1{
+    id?: string;
+    body: string;
+    date: string;
+    powersource: string;
+    smokesensor: string;
+    sound: string;
+    time: string;
+    inspected:string;
+  
+  }
+  export interface SD2{
+    id?: string;
+    body: string;
+    date: string;
+    powersource: string;
+    smokesensor: string;
+    sound: string;
+    time: string;
+    inspected:string;
+  
+  }
+  
+  export interface SD3{
+    id?: string;
+    body: string;
+    date: string;
+    powersource: string;
+    smokesensor: string;
+    sound: string;
+    time: string;
+    inspected:string;
+  
+  }

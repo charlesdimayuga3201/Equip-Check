@@ -1,0 +1,62 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title>Mapping</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- <div class="design1">
+    <img src="/assets/form2.png" alt="">
+  </div> -->
+  <img class="eq-bg" src="/assets/eq.png" alt="">
+<ion-grid [fixed]="true"  id="mySelect">
+  <ion-row>
+
+<ion-col>
+  <ion-list>
+  <ion-item lines ="none" >
+  <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
+    <ion-select-option  value="cics">CICS</ion-select-option>
+    <ion-select-option  value="ceafa">CEAFA</ion-select-option>
+    <ion-select-option  value="cit">CIT</ion-select-option>
+  </ion-select>
+</ion-item>
+</ion-list>
+</ion-col>
+
+<ion-col>
+  <ion-list>
+  <ion-item lines ="none">
+  <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
+    <ion-select-option  value="1st">1st Floor</ion-select-option>
+    <ion-select-option  value="2nd">2nd Floor</ion-select-option>
+    <ion-select-option  value="3rd">3rd Floor</ion-select-option>
+  </ion-select>
+  </ion-item>
+</ion-list>
+</ion-col>
+</ion-row>
+</ion-grid>
+
+<div class = "content-sec"  *ngIf="selectedOption1 === 'cics' && selectedOption2 === '1st'">
+  <h1>COLLEGE OF INFORMATICS AND COMPUTING SCIENCES</h1>
+  <h1>1ST FLOOR</h1>
+  <!-- <img src="/assets/cics-2nd.png" alt=""> -->
+</div>
+
+<div  *ngIf="selectedOption1 === 'cics' && selectedOption2 === '2nd'">
+  <h1>COLLEGE OF INFORMATICS AND COMPUTING SCIENCES - 2ND FLOOR</h1>
+
+  <img src="/assets/cics-2nd.png" alt="">
+</div>
+
+<div  *ngIf="selectedOption1 === 'cics' && selectedOption2 === '3rd'">
+  <h1>COLLEGE OF INFORMATICS AND COMPUTING SCIENCES </h1>
+  <h1>3RD FLOOR</h1>
+  <!-- <img src="/assets/cics-2nd.png" alt=""> -->
+</div>
+
+</ion-content>

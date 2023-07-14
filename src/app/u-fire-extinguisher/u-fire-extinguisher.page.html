@@ -71,7 +71,7 @@
 
 
 
-<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+<!-- <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
   <table class="ion-table">
     <thead align="center">
       <tr>
@@ -97,8 +97,8 @@
     </thead>
     <tbody>
       <tr>
-        <td>06/26/2023</td>
-        <td>9:00 AM</td>
+        <td> <p *ngIf="currentDate"> {{ currentDate }}</p></td>
+        <td><p *ngIf="currentTime"> {{ currentTime }}</p></td>
         <td>
           <ion-radio-group value="custom-checked">
           <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
@@ -126,12 +126,63 @@
         <td>Kc Dimayuga</td>
         
       </tr>
-      <!-- Add more rows as needed -->
+   
     </tbody>
   </table>
 </div>
 <div  class="update-b" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' " >
   <ion-button (click)="updateData()">Update</ion-button>
+</div> -->
+
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed >
+    <ion-row >
+   
+      <ion-col class="header" >Remarks</ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid> 
+    <ion-row>
+      <ion-col *ngIf="currentDate"> {{ currentDate }}</ion-col>
+      <ion-col *ngIf="currentTime">{{ currentTime }}</ion-col>
+      <ion-col> <ion-radio-group value="custom-checked">
+        <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
+        <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
+      </ion-radio-group>
+    </ion-col>
+      <ion-col> <ion-radio-group value="custom-checked">
+        <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
+        <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
+      </ion-radio-group>
+    </ion-col>
+      <ion-col> <ion-radio-group value="custom-checked">
+        <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
+        <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
+      </ion-radio-group>
+    </ion-col>
+      <ion-col>
+        <ion-radio-group value="custom-checked">
+          <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
+          <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
+        </ion-radio-group>
+      </ion-col>
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
 
 </ion-content>
