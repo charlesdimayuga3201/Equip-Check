@@ -14,11 +14,14 @@
 <div class="design2">
   <img src="/assets/form3.png" alt="">
 </div> -->
-<div class="design1">
+<!-- <div class="design1">
   <img src="/assets/form2.png" alt="">
-</div>
+</div> -->
+<div class="bg-f1">
+  <img class ="bg2"src="/assets/floor15.svg" alt="">
+  </div>
 <div class="img-custom">
-<img class ="bg"src="/assets/fe.png" alt="">
+<img class ="bg"src="/assets/4.svg" alt="">
 </div>
 
 <ion-grid [fixed]="true"  id="mySelect">
@@ -35,28 +38,51 @@
       </ion-list>
     </ion-col> -->
     
-
-  
     <ion-col>
-      <ion-list>
-        <ion-item lines ="none">
-        <ion-select   [(ngModel)]="selectedOption"  class="custom-select" placeholder="Select Equipment" interface="popover" fill="outline">
-          <ion-select-option  value="fire">FE1</ion-select-option>
-          <ion-select-option value="fire1">FE2</ion-select-option>
-          <ion-select-option value="fire2" >FE3</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-  </ion-col>
-
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none" >
+      <ion-item lines ="none">
+      <ion-select   [(ngModel)]="selectedOption"  class="custom-select" placeholder="Select Equipment" interface="popover" fill="outline">
+        <ion-select-option  value="fire">FE1</ion-select-option>
+        <ion-select-option value="fire1">FE2</ion-select-option>
+        <ion-select-option value="fire2" >FE3</ion-select-option>
+      </ion-select>
       <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
         <ion-select-option  value="fire">CICS</ion-select-option>
         <ion-select-option  value="fire1">CEAFA</ion-select-option>
         <ion-select-option  value="fire2">CIT</ion-select-option>
       </ion-select>
+      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
+        <ion-select-option  value="fire">1st Floor</ion-select-option>
+        <ion-select-option  value="fire1">2nd Floor</ion-select-option>
+        <ion-select-option  value="fire2">3rd Floor</ion-select-option>
+      </ion-select>
+    </ion-item>
+</ion-col>
+
+  
+    <!-- <ion-col>
+        <ion-item lines ="none" >
+        <ion-select   [(ngModel)]="selectedOption"   class="custom-select" placeholder="Select Equipment" interface="popover" fill="outline">
+          <div >
+          <ion-select-option *ngFor="let ListFireExtinguisher of view2 " value="fire">{{ListFireExtinguisher.ID}}</ion-select-option>
+          </div>
+        </ion-select>
+        <ion-select   [(ngModel)]="selectedOption1"  class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
+          <ion-select-option  value="fire">CICS</ion-select-option>
+          <ion-select-option  value="fire1">CEAFA</ion-select-option>
+          <ion-select-option  value="fire2">CIT</ion-select-option>
+        </ion-select>
+        <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
+          <ion-select-option  value="fire">1st Floor</ion-select-option>
+          <ion-select-option  value="fire1">2nd Floor</ion-select-option>
+          <ion-select-option  value="fire2">3rd Floor</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-col> -->
+
+    <!-- <ion-col>
+      <ion-list>
+      <ion-item lines ="none" >
+      
     </ion-item>
   </ion-list>
 </ion-col>
@@ -64,25 +90,21 @@
     <ion-col>
       <ion-list>
       <ion-item lines ="none">
-      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
-        <ion-select-option  value="fire">1st Floor</ion-select-option>
-        <ion-select-option  value="fire1">2nd Floor</ion-select-option>
-        <ion-select-option  value="fire2">3rd Floor</ion-select-option>
-      </ion-select>
+     
       </ion-item>
     </ion-list>
-    </ion-col>
+    </ion-col> -->
   </ion-row>
 </ion-grid>
-
-<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
-  <ion-grid fixed>
+<div class="main-content">
+  <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed lines >
     <ion-row>
-      <ion-col >Remarks</ion-col>
+      <ion-col class="header"  >Remarks</ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid class="highlight">
-    <ion-row class="header">
+  <ion-grid class="highlight" >
+    <ion-row class="header"  >
       <ion-col>Date</ion-col>
       <ion-col>Time</ion-col>
       <ion-col>Nozzle</ion-col>
@@ -91,19 +113,92 @@
       <ion-col>Body</ion-col>
       <ion-col>Inspected By</ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid >
+  <ion-grid *ngFor="let E1 of sortedData1; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+    <!-- <div *ngIf="FireExtinguisher.ID === 'E1' "> -->
+    <ion-row  >
+      <ion-col>{{E1.date}}</ion-col>
+      <ion-col>{{E1.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E1.nozzle === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E1.nozzle === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E1.gauge === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E1.gauge === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E1.pinlock === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E1.pinlock === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E1.body === 'check'"></ion-icon ><ion-icon name="close-circle-outline" *ngIf = "E1.body === 'notworking3'"> </ion-icon></ion-col>
+      <ion-col>{{E1.inspected}}</ion-col>
 
-  <ion-grid>
-    <ion-row *ngFor="let FireExtinguisher of view">
-      <ion-col>{{FireExtinguisher.date}}</ion-col>
-      <ion-col>{{FireExtinguisher.time}}</ion-col>
-      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
-      <ion-col>{{FireExtinguisher.inspected}}</ion-col>
+   
+    </ion-row>
+  <!-- </div> -->
+  </ion-grid>
+</div>
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
+  <ion-grid fixed lines >
+    <ion-row>
+      <ion-col class="header"  >Remarks</ion-col>
     </ion-row>
   </ion-grid>
+  <ion-grid class="highlight" >
+    <ion-row class="header"  >
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid >
+  <ion-grid *ngFor="let E2 of sortedData2; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+    <!-- <div *ngIf="FireExtinguisher.ID === 'E1' "> -->
+    <ion-row  >
+      <ion-col>{{E2.date}}</ion-col>
+      <ion-col>{{E2.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E2.nozzle === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E2.nozzle === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E2.gauge === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E2.gauge === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E2.pinlock === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E2.pinlock === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E2.body === 'check'"></ion-icon ><ion-icon name="close-circle-outline" *ngIf = "E2.body === 'notworking3'"> </ion-icon></ion-col>
+      <ion-col>{{E2.inspected}}</ion-col>
+
+   
+    </ion-row>
+  <!-- </div> -->
+  </ion-grid>
+</div>
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
+  <ion-grid fixed lines >
+    <ion-row>
+      <ion-col class="header"  >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight" >
+    <ion-row class="header"  >
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid >
+  <ion-grid *ngFor="let E3 of sortedData3; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+    <!-- <div *ngIf="FireExtinguisher.ID === 'E1' "> -->
+    <ion-row >
+      <ion-col>{{E3.date}}</ion-col>
+      <ion-col>{{E3.time}}</ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E3.nozzle === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E3.nozzle === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E3.gauge === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E3.gauge === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E3.pinlock === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "E3.pinlock === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkbox" *ngIf = "E3.body === 'check'"></ion-icon ><ion-icon name="close-circle-outline" *ngIf = "E3.body === 'notworking3'"> </ion-icon></ion-col>
+      <ion-col>{{E3.inspected}}</ion-col>
+
+   
+    </ion-row>
+  <!-- </div> -->
+  </ion-grid>
+</div>
+
 </div>
 
 

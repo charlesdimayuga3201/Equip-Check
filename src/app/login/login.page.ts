@@ -20,7 +20,7 @@ export class LoginPage {
     this.menuController.enable(true);
   }
   async logMeIn() {
-    if (this.Username === 'admin' && this.Password === '1234') {
+    if (this.Username === 'staff' && this.Password === '1234') {
       // Redirect to home page
       this.router.navigate(['/mapping']);
     } else {

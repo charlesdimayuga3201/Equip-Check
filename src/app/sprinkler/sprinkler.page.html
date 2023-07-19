@@ -4,7 +4,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">view</ion-title>
+      <!-- <ion-title size="large">view</ion-title> -->
     </ion-toolbar>
   </ion-header>
   <!-- <ion-grid [fixed]="true">
@@ -15,14 +15,17 @@
   </ion-row>
 </ion-grid> -->
 
-<div class="design2">
+<!-- <div class="design2">
   <img src="/assets/form3.png" alt="">
 </div>
 <div class="design1">
   <img src="/assets/form2.png" alt="">
-</div>
+</div> -->
+<div class="bg-f1">
+  <img class ="bg2"src="/assets/floor15.svg" alt="">
+  </div>
 <div class="img-custom">
-<img src="/assets/s.png" alt="">
+<img src="/assets/6.svg" alt="">
 </div>
 <ion-grid [fixed]="true"  id="mySelect">
   <ion-row>
@@ -72,7 +75,7 @@
 
 
 
-
+<div class="main-content">
 
 <div class = "content-sec" *ngIf="selectedOption === 'smoke' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke' ">
   <ion-grid fixed>
@@ -96,7 +99,7 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row  *ngFor="let S1 of view1">
+    <ion-row  *ngFor="let S1 of sortedData">
       <ion-col>{{S1.date}}</ion-col>
       <ion-col>{{S1.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
@@ -112,10 +115,10 @@
 </div>
 
 
-<div class = "content-sec" *ngIf="selectedOption === 'smoke1' && selectedOption1 === 'smoke1' && selectedOption2  === 'smoke1' ">
+<div class = "content-sec" *ngIf="selectedOption === 'smoke1' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke1' ">
   <ion-grid fixed>
     <ion-row>
-      <ion-col >Remarks</ion-col>
+      <ion-col class="header">Remarks</ion-col>
     </ion-row>
   </ion-grid>
   <ion-grid  class="highlight">
@@ -133,8 +136,9 @@
       </ion-row> 
   </ion-grid>
 
+  
   <ion-grid>
-    <ion-row  *ngFor="let S2 of view2">
+    <ion-row  *ngFor="let S2 of sortedData1">
       <ion-col>{{S2.date}}</ion-col>
       <ion-col>{{S2.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
@@ -149,16 +153,14 @@
   </ion-grid>
 </div>
 
-
-
-<div class = "content-sec" *ngIf="selectedOption === 'smoke2' && selectedOption1 === 'smoke2' && selectedOption2  === 'smoke2' ">
+<div class = "content-sec" *ngIf="selectedOption === 'smoke2' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke2' ">
   <ion-grid fixed>
     <ion-row>
-      <ion-col >Remarks</ion-col>
+      <ion-col class="header" >Remarks</ion-col>
     </ion-row>
   </ion-grid>
   <ion-grid class="highlight">
-      <ion-row header>
+      <ion-row class="header">
         <ion-col>Date</ion-col>
         <ion-col>Time</ion-col>
         <ion-col>Sprinkler Head</ion-col>
@@ -173,7 +175,7 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row  *ngFor="let S3 of view3">
+    <ion-row  *ngFor="let S3 of sortedData2">
       <ion-col>{{S3.date}}</ion-col>
       <ion-col>{{S3.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
@@ -187,7 +189,7 @@
     </ion-row>
   </ion-grid>
 </div>
-
+</div>
 </ion-content>
 
 

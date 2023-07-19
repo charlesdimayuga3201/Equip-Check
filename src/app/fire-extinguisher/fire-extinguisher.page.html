@@ -2,85 +2,53 @@
 
 
 <ion-content [fullscreen]="true">
- 
-  <!-- <ion-grid [fixed]="true">
-  <ion-row>
-    <ion-col>Safety Equipment</ion-col>
-    <ion-col> Buildings</ion-col>
-    <ion-col>Floors</ion-col>
-  </ion-row>
-</ion-grid> -->
-<!-- <div class="design2">
-  <img src="/assets/form3.png" alt="">
-</div> -->
-<div class="design1">
-  <img src="/assets/form2.png" alt="">
-</div>
-
+  <div class="bg-f1">
+    <img class ="bg2"src="/assets/floor15.svg" alt="">
+    </div>
 <div class="img-custom">
-<img class ="bg"src="/assets/fe.png" alt="">
+<img class ="bg"src="/assets/4.svg" alt="">
 </div>
+<!-- <div class="bg-f">
+  <img class ="bg1"src="/assets/bg-f2.png" alt="">
+  </div> -->
+ 
 
 <ion-grid [fixed]="true"  id="mySelect">
 
   <ion-row>
-    <!-- <ion-col >
-      <ion-list>
-        <ion-item>
-          <ion-select class="custom-select" placeholder="Equipment">
-            <ion-select-option value="Fire_Extinguisher">Fire Extinguisher</ion-select-option>
-            <ion-select-option value="Smoke_Detector">Smoke Detector</ion-select-option>
-            <ion-select-option value="Sprinkler">Sprinkler</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-col> -->
+    
     
 
-    <ion-col>
-      <ion-list>
+    <ion-col class="select-option">
+     
         <ion-item lines ="none">
-        <ion-select   [(ngModel)]="selectedOption"  class="custom-select" placeholder="Select Equipment" interface="popover" fill="outline">
+        <ion-select   [(ngModel)]="selectedOption"  class="custom-select" placeholder="Equipment" interface="popover" fill="outline">
           <ion-select-option  value="fire">FE1</ion-select-option>
           <ion-select-option value="fire1">FE2</ion-select-option>
           <ion-select-option value="fire2" >FE3</ion-select-option>
         </ion-select>
+        <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Buildings" interface="popover" fill="outline">
+          <ion-select-option  value="fire">CICS</ion-select-option>
+          <ion-select-option  value="fire1">CEAFA</ion-select-option>
+          <ion-select-option  value="fire2">CIT</ion-select-option>
+        </ion-select>
+        <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Floor" interface="popover" fill="outline">
+          <ion-select-option  value="fire">1st Floor</ion-select-option>
+          <ion-select-option  value="fire1">2nd Floor</ion-select-option>
+          <ion-select-option  value="fire2">3rd Floor</ion-select-option>
+        </ion-select>
       </ion-item>
-    </ion-list>
   </ion-col>
 
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none" >
-      <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
-        <ion-select-option  value="fire">CICS</ion-select-option>
-        <ion-select-option  value="fire1">CEAFA</ion-select-option>
-        <ion-select-option  value="fire2">CIT</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-</ion-col>
-
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none">
-      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
-        <ion-select-option  value="fire">1st Floor</ion-select-option>
-        <ion-select-option  value="fire1">2nd Floor</ion-select-option>
-        <ion-select-option  value="fire2">3rd Floor</ion-select-option>
-      </ion-select>
-      </ion-item>
-    </ion-list>
-    </ion-col>
   </ion-row>
 </ion-grid>
 
 
 
-
+<div class="main-content">
 
 <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
-  <ion-grid fixed >
+  <ion-grid fixed  >
     <ion-row >
    
       <ion-col class="header" >Remarks</ion-col>
@@ -99,8 +67,9 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid> 
-    <ion-row *ngFor="let E1 of view1">
+  <ion-grid *ngFor="let E1 of sortedData"> 
+    <ion-row >
+     
       <ion-col>{{E1.date}}</ion-col>
       <ion-col>{{E1.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
@@ -108,13 +77,14 @@
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
       <ion-col>{{E1.inspected}}</ion-col>
+ 
     </ion-row>
   </ion-grid>
 </div>
 
 
 
-<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
+<div class = "content-sec" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
   <ion-grid fixed>
     <ion-row>
       <ion-col  class="header">Remarks</ion-col>
@@ -133,7 +103,7 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row *ngFor="let E2 of view2">
+    <ion-row *ngFor="let E2 of sortedData1">
       <ion-col>{{E2.date}}</ion-col>
       <ion-col>{{E2.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
@@ -147,7 +117,7 @@
 
 
 
-<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
+<div class = "content-sec" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
   <ion-grid fixed>
     <ion-row>
       <ion-col >Remarks</ion-col>
@@ -166,7 +136,7 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row *ngFor="let E3 of view3">
+    <ion-row *ngFor="let E3 of sortedData2">
       <ion-col>{{E3.date}}</ion-col>
       <ion-col>{{E3.time}}</ion-col>
       <ion-col><ion-icon name="checkbox"></ion-icon></ion-col>
@@ -177,7 +147,7 @@
     </ion-row>
   </ion-grid>
 </div>
-
+</div>
 
 </ion-content>
 

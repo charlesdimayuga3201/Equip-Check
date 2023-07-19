@@ -8,35 +8,27 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <!-- <div class="design1">
-    <img src="/assets/form2.png" alt="">
-  </div> -->
-  <img class="eq-bg" src="/assets/eq.png" alt="">
+  <div class="custom-img">
+    <!-- <img src="/assets/form2.png" alt=""> -->
+    <img class="eq-bg" src="/assets/EQC2.svg" alt="">
+  </div>
+
 <ion-grid [fixed]="true"  id="mySelect">
   <ion-row>
 
 <ion-col>
-  <ion-list>
   <ion-item lines ="none" >
-  <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
+  <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" >
     <ion-select-option  value="cics">CICS</ion-select-option>
     <ion-select-option  value="ceafa">CEAFA</ion-select-option>
     <ion-select-option  value="cit">CIT</ion-select-option>
   </ion-select>
-</ion-item>
-</ion-list>
-</ion-col>
-
-<ion-col>
-  <ion-list>
-  <ion-item lines ="none">
-  <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
+  <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" >
     <ion-select-option  value="1st">1st Floor</ion-select-option>
     <ion-select-option  value="2nd">2nd Floor</ion-select-option>
     <ion-select-option  value="3rd">3rd Floor</ion-select-option>
   </ion-select>
-  </ion-item>
-</ion-list>
+</ion-item>
 </ion-col>
 </ion-row>
 </ion-grid>

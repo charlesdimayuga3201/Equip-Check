@@ -1,15 +1,17 @@
 
 
 <ion-content [fullscreen]="true">
-  <div class="design2">
+  <!-- <div class="design2">
     <img src="/assets/form3.png" alt="">
   </div>
   <div class="design1">
     <img src="/assets/form2.png" alt="">
-  </div>
-  
+  </div> -->
+  <div class="bg-f1">
+    <img class ="bg2"src="/assets/floor15.svg" alt="">
+    </div>
   <div class="img-custom">
-  <img class ="bg"src="/assets/fe.png" alt="">
+  <img class ="bg"src="/assets/4.svg" alt="">
   </div>
 
 
@@ -134,7 +136,7 @@
   <ion-button (click)="updateData()">Update</ion-button>
 </div> -->
 
-
+<div class="main-content">
 <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
   <ion-grid fixed >
     <ion-row >
@@ -155,34 +157,41 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid> 
+  <ion-grid *ngFor="let FireExtinguisher of sortedData"> 
+    <div >
     <ion-row>
-      <ion-col *ngIf="currentDate"> {{ currentDate }}</ion-col>
-      <ion-col *ngIf="currentTime">{{ currentTime }}</ion-col>
-      <ion-col> <ion-radio-group value="custom-checked">
-        <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
-        <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
+      <ion-col> {{ currentDate }}</ion-col>
+      <ion-col >{{ currentTime }}</ion-col>
+      <ion-col> 
+        <ion-radio-group  (ionChange)="radioGroupChange($event)">
+        <ion-radio value="check"   aria-label="Custom checkbox that is checked" ></ion-radio>
+        <ion-radio  value="notworking"  aria-label="Custom checkbox"> </ion-radio>
       </ion-radio-group>
     </ion-col>
-      <ion-col> <ion-radio-group value="custom-checked">
-        <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
-        <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
-      </ion-radio-group>
-    </ion-col>
-      <ion-col> <ion-radio-group value="custom-checked">
-        <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
-        <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
-      </ion-radio-group>
-    </ion-col>
-      <ion-col>
-        <ion-radio-group value="custom-checked">
-          <ion-radio value="custom" aria-label="Custom checkbox"></ion-radio>
-          <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked"></ion-radio>
-        </ion-radio-group>
-      </ion-col>
+    <ion-col> 
+      <ion-radio-group (ionChange)="radioGroupChange1($event)">
+      <ion-radio value="check"  aria-label="Custom checkbox that is checked" ></ion-radio>
+      <ion-radio value="notworking1" aria-label="Custom checkbox"></ion-radio>
+    </ion-radio-group>
+  </ion-col>
+  <ion-col> 
+    <ion-radio-group (ionChange)="radioGroupChange2($event)">
+    <ion-radio value="check"  aria-label="Custom checkbox that is checked" ></ion-radio>
+    <ion-radio value="notworking2" aria-label="Custom checkbox"></ion-radio>
+  </ion-radio-group>
+</ion-col>
+  <ion-col> 
+    <ion-radio-group (ionChange)="radioGroupChange3($event)">
+    <ion-radio value="check"   aria-label="Custom checkbox that is checked" ></ion-radio>
+    <ion-radio value="notworking3" aria-label="Custom checkbox"></ion-radio>
+  </ion-radio-group>
+</ion-col>
+      
       <ion-col>Kc Dimayuga</ion-col>
     </ion-row>
+  </div>
   </ion-grid>
+  <ion-button (click)="updateData()">Update</ion-button>
 </div>
-
+</div>
 </ion-content>

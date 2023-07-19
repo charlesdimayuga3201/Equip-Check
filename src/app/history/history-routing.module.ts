@@ -12,14 +12,14 @@ const routes: Routes = [
         path: 'h-fire-extinguisher',
         loadChildren: () => import('../h-fire-extinguisher/h-fire-extinguisher.module').then( m => m.HFireExtinguisherPageModule)
       },
-      // {
-      //   path: 'smoke-detector',
-      //   loadChildren: () => import('../h-smoke-detector/h-smoke-detector.module').then( m => m.HSmokeDetectorPageModule)
-      // },
-      // {
-      //   path: 'sprinkler',
-      //   loadChildren: () => import('../h-sprinkler/h-sprinkler.module').then( m => m.HSprinklerPageModule)
-      // },
+      {
+        path: 'h-smoke-detector',
+        loadChildren: () => import('../h-smoke-detector/h-smoke-detector.module').then( m => m.HSmokeDetectorPageModule)
+      },
+      {
+        path: 'h-sprinkler',
+        loadChildren: () => import('../h-sprinkler/h-sprinkler.module').then( m => m.HSprinklerPageModule)
+      },
   
       {
         path: '',

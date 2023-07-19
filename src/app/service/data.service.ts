@@ -1,6 +1,10 @@
+
 import { Injectable } from '@angular/core';
 import { Firestore , collectionData, docData,  collection, doc, addDoc} from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
+;
+
+
 
 export interface FireExtinguisher{
   id?: string;
@@ -12,15 +16,21 @@ export interface FireExtinguisher{
   inspected:string;
 
 }
+export interface ListFireExtinguisher{
+  id?: string;
+  building: string;
+  floor: string;
+
+}
 export interface E1{
   id?: string;
   body: string;
-  date: string;
+  date: string | undefined;
   gauge: string;
   nozzle: string;
   pinlock: string;
-  inspected:string;
-
+  inspected:string; 
+  time: string | undefined;
 }
 export interface E2{
   id?: string;
@@ -138,6 +148,14 @@ export class DataService {
     const E1DocRef = doc(this.firestore, `E1/${id}`);
     return docData(E1DocRef, {idField: 'id'}) as Observable<E1[]>;
   }
+  addE1(E1: E1) {
+    const E1Ref = collection(this.firestore, 'E1')
+    return addDoc(E1Ref, E1)
+  }
+
+
+
+
   getE2(): Observable<E2[]> {
     const E2Ref = collection(this.firestore, 'E2')
     return collectionData(E2Ref, {idField: 'id'}) as Observable<E2[]>;
@@ -208,6 +226,15 @@ export class DataService {
 
 
 
+  getListFireExtinguisher(): Observable<ListFireExtinguisher[]> {
+    const ListFireExtinguisherRef = collection(this.firestore, 'ListFireExtinguisher')
+    return collectionData(ListFireExtinguisherRef, {idField: 'id'}) as Observable<ListFireExtinguisher[]>;
+  } 
+  getListFireExtinguisherById(id:string): Observable<ListFireExtinguisher[]> {
+    const ListFireExtinguisherDocRef = doc(this.firestore, `ListFireExtinguisher/${id}`);
+    return docData(ListFireExtinguisherDocRef, {idField: 'id'}) as Observable<ListFireExtinguisher[]>;
+  } 
+
   getFireExtinguisher(): Observable<FireExtinguisher[]> {
     const FireExtinguisherRef = collection(this.firestore, 'FireExtinguisher')
     return collectionData(FireExtinguisherRef, {idField: 'id'}) as Observable<FireExtinguisher[]>;
@@ -216,6 +243,7 @@ export class DataService {
     const FireExtinguisherDocRef = doc(this.firestore, `FireExtinguisher/${id}`);
     return docData(FireExtinguisherDocRef, {idField: 'id'}) as Observable<FireExtinguisher[]>;
   } 
-
+  
+  
 }
 ;

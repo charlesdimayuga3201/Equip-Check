@@ -11,14 +11,17 @@
   </ion-row>
 </ion-grid> -->
 
-<div class="design2">
+<!-- <div class="design2">
   <img src="/assets/form3.png" alt="">
 </div>
 <div class="design1">
   <img src="/assets/form2.png" alt="">
-</div>
+</div> -->
+<div class="bg-f1">
+  <img class ="bg2"src="/assets/floor15.svg" alt="">
+  </div>
 <div class="img-custom">
-<img src="/assets/sd.png" alt="">
+<img src="/assets/5.svg" alt="">
 </div>
 <ion-grid [fixed]="true"  id="mySelect">
   <ion-row>
@@ -74,7 +77,7 @@
 
 
 
-
+<div class="main-content">
 
 <div class = "content-sec" *ngIf="selectedOption === 'smoke' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke' ">
   <ion-grid fixed>
@@ -170,6 +173,7 @@
 </div>
 <div  class="update-b" *ngIf="selectedOption === 'smoke' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke' " >
   <ion-button (click)="updateData()">Update</ion-button>
+</div>
 </div>
 </ion-content>
 
