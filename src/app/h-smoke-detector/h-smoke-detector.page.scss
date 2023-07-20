@@ -22,7 +22,26 @@
 // .content-sec{
 //   margin-bottom: 20px;
 // }
-
+ion-row{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-item{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-select{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-select-option{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
 ion-grid{
   --ion-grid-padding: 8px;
 

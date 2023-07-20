@@ -22,11 +22,34 @@ export class HFireExtinguisherPage implements OnInit {
   latestDate!: Date;
   
   ngOnInit() {
-  }
-  sortedData3: any = [];
-  sortedData2: any = [];
-  sortedData1: any = [];
-  sortedData: any[] = [];
+    const collectionRef1 = collection(this.firestore, 'E1');
+    const q1 = query(collectionRef1, orderBy('date', 'desc'));
+    console.log(q1);
+    getDocs(q1).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+      this.sortedData1 = querySnapshot.docs.map((doc) => doc.data());
+      console.log(this.sortedData1);
+    });
+    
+    const collectionRef2 = collection(this.firestore, 'E2');
+    const q2 = query(collectionRef2, orderBy('date', 'desc'));
+    console.log(q2);
+    getDocs(q2).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+      this.sortedData2 = querySnapshot.docs.map((doc) => doc.data());
+      console.log(this.sortedData2);
+    });
+      
+    const collectionRef3 = collection(this.firestore, 'E3');
+    const q3 = query(collectionRef3, orderBy('date', 'desc'));
+    console.log(q3);
+    getDocs(q3).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+      this.sortedData3 = querySnapshot.docs.map((doc) => doc.data());
+      console.log(this.sortedData3);
+    });
+      }
+      sortedData3: any = [];
+      sortedData2: any = [];
+      sortedData1: any = [];
+      sortedData: any[] = [];
   view: any = [];
   view2: any = [];
 
