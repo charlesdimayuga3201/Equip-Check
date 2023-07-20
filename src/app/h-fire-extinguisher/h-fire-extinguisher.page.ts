@@ -22,23 +22,6 @@ export class HFireExtinguisherPage implements OnInit {
   latestDate!: Date;
   
   ngOnInit() {
-    // this.view.sort((a: any, b: any) => {
-    //   const dateA = new Date(a.date);
-    //   const dateB = new Date(b.date);
-    //   return dateB.getTime() - dateA.getTime();
-    // });
-    
-    // const collectionRef = collection(this.firestore, 'FireExtinguisher');
-    // const q = query(collectionRef, orderBy('date', 'desc'), limit(1));
-    // console.log(q);
-    // getDocs(q).then((querySnapshot: QuerySnapshot<DocumentData>) => {
-    //   querySnapshot.docs.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
-    //     const latestDocument = doc.data();
-    //     this.sortedData= [latestDocument];
-    //     console.log(this.sortedData);
-    //   });
-    // });
-
     const collectionRef1 = collection(this.firestore, 'E1');
     const q1 = query(
       collectionRef1,

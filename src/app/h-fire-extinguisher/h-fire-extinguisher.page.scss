@@ -236,6 +236,26 @@ ion-select{
 //     0px 1px 3px 0px rgba(0, 0, 0, 0.02),;
 
 }
+ion-row{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-item{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-select{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-select-option{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
 ion-radio::part(container) {
   width: 30px;
   height: 30px;

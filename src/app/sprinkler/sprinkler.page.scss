@@ -154,6 +154,26 @@ ion-row{
 ion-header{
   --background:#eacccc ;
 }
+ion-row{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-item{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-select{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
+ion-select-option{
+  --background: transparent;
+  --padding: 0;
+  --margin: 0;
+}
 // ion-content {
  
  
