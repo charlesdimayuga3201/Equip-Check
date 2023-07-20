@@ -17,12 +17,18 @@
     align-items: center;
 
 }
+.content-sec{
+  // height: auto;
+  // width: 900px;
+  margin-top: -40px;
+}
 .content-sec ion-col {
     // background-color: #135d54;
     // border: solid 1px #fff;
     // color: #fff;
     // border: 1px solid hsl(0, 100%, 75%);
     border-radius: 0.3rem;
+ 
     background-color: rgb(255, 208, 208);
     margin-left: 0.5rem;
      box-shadow: 
@@ -34,6 +40,7 @@
   h1{
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
   }
   .design1{
     //   height: 70vh;

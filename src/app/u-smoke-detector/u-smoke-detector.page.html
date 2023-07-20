@@ -46,35 +46,29 @@
           <ion-select-option value="smoke1">SD2</ion-select-option>
           <ion-select-option value="smoke2" >SD3</ion-select-option>
         </ion-select>
+
+        <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Selected Buildings" interface="popover" fill="outline">
+          <ion-select-option  value="smoke">CICS</ion-select-option>
+          <ion-select-option  value="smoke1">CEAFA</ion-select-option>
+          <ion-select-option  value="smoke2">CIT</ion-select-option>
+        </ion-select>
+
+        <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"   placeholder=" Selected Floor" interface="popover" fill="outline">
+          <ion-select-option  value="smoke">1st Floor</ion-select-option>
+          <ion-select-option  value="smoke1">2nd Floor</ion-select-option>
+          <ion-select-option  value="smoke2">3rd Floor</ion-select-option>
+        </ion-select>
       </ion-item>
     </ion-list>
   </ion-col>
 
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none" >
-     <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Selected Buildings" interface="popover" fill="outline">
-        <ion-select-option  value="smoke">CICS</ion-select-option>
-        <ion-select-option  value="smoke1">CEAFA</ion-select-option>
-        <ion-select-option  value="smoke2">CIT</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list></ion-col>
-
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none">
-      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"   placeholder=" Selected Floor" interface="popover" fill="outline">
-        <ion-select-option  value="smoke">1st Floor</ion-select-option>
-        <ion-select-option  value="smoke1">2nd Floor</ion-select-option>
-        <ion-select-option  value="smoke2">3rd Floor</ion-select-option>
-      </ion-select>
-      </ion-item>
-    </ion-list>
-    </ion-col>
+  
   </ion-row>
 </ion-grid>
 
+<div  class ="bg3">
+  <img src="/assets/leg.svg" alt="">
+</div>
 
 
 <div class="main-content">
@@ -82,11 +76,11 @@
 <div class = "content-sec" *ngIf="selectedOption === 'smoke' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke' ">
   <ion-grid fixed>
     <ion-row>
-      <ion-col >Remarks</ion-col>
+      <ion-col class="header" >Remarks</ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
-    <ion-row>
+  <ion-grid class="highlight">
+    <ion-row class="header">
       <ion-col>Date</ion-col>
       <ion-col>Time</ion-col>
       <ion-col>Power Source</ion-col>
@@ -97,83 +91,145 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid>
+  <ion-grid> 
+    <div >
     <ion-row>
-      <ion-col>06/26/2023</ion-col>
-      <ion-col>9:00 AM</ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked1"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked2"></ion-checkbox></ion-col>
-      <ion-col>03/24/2028</ion-col>
+      <ion-col> {{ currentDate }}</ion-col>
+      <ion-col >{{ currentTime }}</ion-col>
+      <ion-col> 
+        <ion-radio-group  (ionChange)="radioGroupChange($event)">
+        <ion-radio value="check"   aria-label="Custom checkbox that is checked" ></ion-radio>
+        <ion-radio  value="notworking"  aria-label="Custom checkbox"> </ion-radio>
+      </ion-radio-group>
+    </ion-col>
+    <ion-col> 
+      <ion-radio-group (ionChange)="radioGroupChange1($event)">
+      <ion-radio value="check1"  aria-label="Custom checkbox that is checked" ></ion-radio>
+      <ion-radio value="notworking1" aria-label="Custom checkbox"></ion-radio>
+    </ion-radio-group>
+  </ion-col>
+  <ion-col> 
+    <ion-radio-group (ionChange)="radioGroupChange2($event)">
+    <ion-radio value="check2"  aria-label="Custom checkbox that is checked" ></ion-radio>
+    <ion-radio value="notworking2" aria-label="Custom checkbox"></ion-radio>
+  </ion-radio-group>
+</ion-col>
+    <ion-col>03/24/2028</ion-col>
+
+      
       <ion-col>Kc Dimayuga</ion-col>
     </ion-row>
+  </div>
   </ion-grid>
-</div>
-
-<div class = "content-sec" *ngIf="selectedOption === 'smoke1' && selectedOption1 === 'smoke1' && selectedOption2  === 'smoke1' ">
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col >Remarks</ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col>Date</ion-col>
-      <ion-col>Time</ion-col>
-      <ion-col>Power Source</ion-col>
-      <ion-col>Smoker Sensor</ion-col>
-      <ion-col>Sound</ion-col>
-      <ion-col>Capacity</ion-col>
-      <ion-col>Inspected By</ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col>06/27/2023</ion-col>
-      <ion-col>10:00 AM</ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked1"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked2"></ion-checkbox></ion-col>
-      <ion-col>03/24/2028</ion-col>
-      <ion-col>Kc Dimayuga</ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
-
-<div class = "conten-sec" *ngIf="selectedOption === 'smoke2' && selectedOption1 === 'smoke2' && selectedOption2  === 'smoke2' ">
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col >Remarks</ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col>Date</ion-col>
-      <ion-col>Time</ion-col>
-      <ion-col>Power Source</ion-col>
-      <ion-col>Smoker Sensor</ion-col>
-      <ion-col>Sound</ion-col>
-      <ion-col>Capacity</ion-col>
-      <ion-col>Inspected By</ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col>06/28/2023</ion-col>
-      <ion-col>11:00 AM</ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked1"></ion-checkbox></ion-col>
-      <ion-col><ion-checkbox [(ngModel)]="isChecked2"></ion-checkbox></ion-col>
-      <ion-col>03/24/2028</ion-col>
-      <ion-col>Kc Dimayuga</ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
-<div  class="update-b" *ngIf="selectedOption === 'smoke' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke' " >
   <ion-button (click)="updateData()">Update</ion-button>
 </div>
+
+
+
+<div class = "conten-sec" *ngIf="selectedOption === 'smoke1' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke1' ">
+  <ion-grid fixed>
+    <ion-row> 
+      <ion-col class="header" >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Power Source</ion-col>
+      <ion-col>Smoker Sensor</ion-col>
+      <ion-col>Sound</ion-col>
+      <ion-col>Capacity</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid> 
+    <div >
+    <ion-row>
+      <ion-col> {{ currentDate }}</ion-col>
+      <ion-col >{{ currentTime }}</ion-col>
+      <ion-col> 
+        <ion-radio-group  (ionChange)="radioGroupChange($event)">
+        <ion-radio value="check"   aria-label="Custom checkbox that is checked" ></ion-radio>
+        <ion-radio  value="notworking"  aria-label="Custom checkbox"> </ion-radio>
+      </ion-radio-group>
+    </ion-col>
+    <ion-col> 
+      <ion-radio-group (ionChange)="radioGroupChange1($event)">
+      <ion-radio value="check1"  aria-label="Custom checkbox that is checked" ></ion-radio>
+      <ion-radio value="notworking1" aria-label="Custom checkbox"></ion-radio>
+    </ion-radio-group>
+  </ion-col>
+  <ion-col> 
+    <ion-radio-group (ionChange)="radioGroupChange2($event)">
+    <ion-radio value="check2"  aria-label="Custom checkbox that is checked" ></ion-radio>
+    <ion-radio value="notworking2" aria-label="Custom checkbox"></ion-radio>
+  </ion-radio-group>
+</ion-col>
+    <ion-col>03/24/2028</ion-col>
+
+      
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </div>
+  </ion-grid>
+  <ion-button (click)="updateData1()">Update</ion-button>
+</div>
+
+
+
+<div class = "conten-sec" *ngIf="selectedOption === 'smoke2' && selectedOption1 === 'smoke' && selectedOption2  === 'smoke2' ">
+  <ion-grid fixed>
+    <ion-row> 
+      <ion-col class="header" >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight">
+    <ion-row class="header">
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Power Source</ion-col>
+      <ion-col>Smoker Sensor</ion-col>
+      <ion-col>Sound</ion-col>
+      <ion-col>Capacity</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid> 
+    <div >
+    <ion-row>
+      <ion-col> {{ currentDate }}</ion-col>
+      <ion-col >{{ currentTime }}</ion-col>
+      <ion-col> 
+        <ion-radio-group  (ionChange)="radioGroupChange($event)">
+        <ion-radio value="check"   aria-label="Custom checkbox that is checked" ></ion-radio>
+        <ion-radio  value="notworking"  aria-label="Custom checkbox"> </ion-radio>
+      </ion-radio-group>
+    </ion-col>
+    <ion-col> 
+      <ion-radio-group (ionChange)="radioGroupChange1($event)">
+      <ion-radio value="check1"  aria-label="Custom checkbox that is checked" ></ion-radio>
+      <ion-radio value="notworking1" aria-label="Custom checkbox"></ion-radio>
+    </ion-radio-group>
+  </ion-col>
+  <ion-col> 
+    <ion-radio-group (ionChange)="radioGroupChange2($event)">
+    <ion-radio value="check2"  aria-label="Custom checkbox that is checked" ></ion-radio>
+    <ion-radio value="notworking2" aria-label="Custom checkbox"></ion-radio>
+  </ion-radio-group>
+</ion-col>
+    <ion-col>03/24/2028</ion-col>
+
+      
+      <ion-col>Kc Dimayuga</ion-col>
+    </ion-row>
+  </div>
+  </ion-grid>
+  <ion-button (click)="updateData2()">Update</ion-button>
+</div>
+
 </div>
 </ion-content>
 

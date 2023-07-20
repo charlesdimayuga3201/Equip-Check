@@ -46,32 +46,23 @@
           <ion-select-option value="smoke1">SD2</ion-select-option>
           <ion-select-option value="smoke2" >SD3</ion-select-option>
         </ion-select>
+
+        <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Selected Buildings" interface="popover" fill="outline">
+          <ion-select-option  value="smoke">CICS</ion-select-option>
+          <ion-select-option  value="smoke1">CEAFA</ion-select-option>
+          <ion-select-option  value="smoke2">CIT</ion-select-option>
+        </ion-select>
+
+        <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"   placeholder=" Selected Floor" interface="popover" fill="outline">
+          <ion-select-option  value="smoke">1st Floor</ion-select-option>
+          <ion-select-option  value="smoke1">2nd Floor</ion-select-option>
+          <ion-select-option  value="smoke2">3rd Floor</ion-select-option>
+        </ion-select>
       </ion-item>
     </ion-list>
   </ion-col>
 
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none" >
-     <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Selected Buildings" interface="popover" fill="outline">
-        <ion-select-option  value="smoke">CICS</ion-select-option>
-        <ion-select-option  value="smoke1">CEAFA</ion-select-option>
-        <ion-select-option  value="smoke2">CIT</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list></ion-col>
 
-    <ion-col>
-      <ion-list>
-      <ion-item lines ="none">
-      <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"   placeholder=" Selected Floor" interface="popover" fill="outline">
-        <ion-select-option  value="smoke">1st Floor</ion-select-option>
-        <ion-select-option  value="smoke1">2nd Floor</ion-select-option>
-        <ion-select-option  value="smoke2">3rd Floor</ion-select-option>
-      </ion-select>
-      </ion-item>
-    </ion-list>
-    </ion-col>
   </ion-row>
 </ion-grid>
 

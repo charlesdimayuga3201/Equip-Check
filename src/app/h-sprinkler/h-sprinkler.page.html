@@ -78,7 +78,7 @@
   </ion-row>
 </ion-grid>
 <div class="main-content">
-  <div class = "content-sec" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
+  <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
   <ion-grid fixed lines >
     <ion-row>
       <ion-col class="header"  >Remarks</ion-col>
@@ -103,14 +103,13 @@
  
       <ion-col>{{S1.date}}</ion-col>
       <ion-col>{{S1.time}}</ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.sprinklerhead === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.sprinklerhead === 'notworking'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.piping === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.piping === 'notworking1'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.valves === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.valves === 'notworking2'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.pressureregulator=== 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.pressureregulator === 'notworking3'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.controlpanel === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.controlpanel === 'notworking4'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.backflowpreventer === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.backflowpreventer === 'notworking5'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S1.watersource === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S1.watersource === 'notworking6'"> </ion-icon></ion-col>
-      
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.sprinklerhead === 'check'"></ion-icon> <ion-icon   class="cross" name="close-circle-outline" *ngIf = "S1.sprinklerhead === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.piping === 'check1'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S1.piping === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.valves === 'check2'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S1.valves === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.pressureregulator === 'check3'"> </ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S1.pressureregulator === 'notworking3'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.controlpanel === 'check4'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S1.controlpanel === 'notworking4'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.backflowpreventer === 'check5'"> </ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S1.backflowpreventer === 'notworking5'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S1.watersource === 'check6'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S1.watersource === 'notworking6'"> </ion-icon></ion-col>
       <ion-col>{{S1.inspected}}</ion-col>
     
     </ion-row>
@@ -118,7 +117,7 @@
   </ion-grid>
 </div>
 
-<div class = "content-sec" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
+<div class = "content-sec" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
   <ion-grid fixed lines >
     <ion-row>
       <ion-col class="header"  >Remarks</ion-col>
@@ -143,14 +142,14 @@
  
       <ion-col>{{S2.date}}</ion-col>
       <ion-col>{{S2.time}}</ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.sprinklerhead=== 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.sprinklerhead === 'notworking'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.piping === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.piping === 'notworking1'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.valves === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.valves === 'notworking2'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.pressureregulator=== 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.pressureregulator === 'notworking3'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.controlpanel === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.controlpanel === 'notworking4'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.backflowpreventer === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.backflowpreventer === 'notworking5'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S2.watersource === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S2.watersource === 'notworking6'"> </ion-icon></ion-col>
-      
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.sprinklerhead=== 'check'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S2.sprinklerhead === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.piping === 'check1'"></ion-icon> <ion-icon class="cross" name="close-circle-outline" *ngIf = "S2.piping === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.valves === 'check2'"></ion-icon> <ion-icon   class="cross" name="close-circle-outline" *ngIf = "S2.valves === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.pressureregulator=== 'check3'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S2.pressureregulator === 'notworking3'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.controlpanel === 'check4'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S2.controlpanel === 'notworking4'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.backflowpreventer === 'check5'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S2.backflowpreventer === 'notworking5'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S2.watersource === 'check6'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S2.watersource === 'notworking6'"> </ion-icon></ion-col>
+  
       <ion-col>{{S2.inspected}}</ion-col>
     
     </ion-row>
@@ -159,7 +158,7 @@
 </div>
 
 
-<div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+<div class = "content-sec" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
   <ion-grid fixed lines >
     <ion-row>
       <ion-col class="header"  >Remarks</ion-col>
@@ -184,13 +183,13 @@
  
       <ion-col>{{S3.date}}</ion-col>
       <ion-col>{{S3.time}}</ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.sprinklerhead=== 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.sprinklerhead === 'notworking'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.piping === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.piping === 'notworking1'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.valves === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.valves === 'notworking2'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.pressureregulator=== 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.pressureregulator === 'notworking3'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.controlpanel === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.controlpanel === 'notworking4'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.backflowpreventer === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.backflowpreventer === 'notworking5'"> </ion-icon></ion-col>
-      <ion-col><ion-icon name="checkbox" *ngIf = "S3.watersource === 'check'"></ion-icon> <ion-icon name="close-circle-outline" *ngIf = "S3.watersource === 'notworking6'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.sprinklerhead=== 'check'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.sprinklerhead === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.piping === 'check1'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.piping === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.valves === 'check2'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.valves === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.pressureregulator=== 'check3'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.pressureregulator === 'notworking3'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.controlpanel === 'check4'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.controlpanel === 'notworking4'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.backflowpreventer === 'check5'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.backflowpreventer === 'notworking5'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "S3.watersource === 'check6'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "S3.watersource === 'notworking6'"> </ion-icon></ion-col>
       
       <ion-col>{{S3.inspected}}</ion-col>
     

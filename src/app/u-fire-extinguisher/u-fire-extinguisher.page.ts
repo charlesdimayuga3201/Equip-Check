@@ -6,6 +6,31 @@ import { collection, query, orderBy, limit, getDocs, QuerySnapshot, QueryConstra
 import { AlertController } from '@ionic/angular';
 export interface E1{
   id?: string;
+  ID: string;
+  body: string;
+  date: string | undefined;
+  gauge: string;
+  nozzle: string;
+  pinlock: string;
+  inspected:string;
+  time:string | undefined;
+
+}
+export interface E2{
+  id?: string;
+  ID: string;
+  body: string;
+  date: string | undefined;
+  gauge: string;
+  nozzle: string;
+  pinlock: string;
+  inspected:string;
+  time:string | undefined;
+
+}
+export interface E3{
+  id?: string;
+  ID: string;
   body: string;
   date: string | undefined;
   gauge: string;
@@ -42,6 +67,7 @@ export class UFireExtinguisherPage implements OnInit {
   currentTime: string | undefined;
   currentDate!: string;
   dataCollection: any;
+  
   selectedItem!: string;
   option1!: string;
   option!: string;
@@ -52,7 +78,7 @@ export class UFireExtinguisherPage implements OnInit {
    
     this.currentDate = this.getCurrentDate();
     console.log(this.currentDate);
-    this.dataCollection = collection(firestore, 'E1') as any;
+    this.dataCollection = collection(firestore, 'SD1') as any;
   }
   clearSelection() {
     this.isChecked = false;
@@ -68,9 +94,54 @@ export class UFireExtinguisherPage implements OnInit {
     await alert.present();
   }
   
+  async updateData2(){
+    // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
+      this.dataService.addE3({
+        ID: 'E3',
+        body: this.option3, // Add appropriate value
+        date: this.currentDate, // Add appropriate value
+        gauge:this.option1, // Add appropriate value
+        pinlock: this.option2, // Add appropriate value
+        inspected: 'Kc Dimayuga', // Add appropriate value
+        nozzle: this.option,
+        time: this.currentTime,
+         })
+         await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
+        
+  
+    // }
+    //   else{  
+    //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+    //       }
+  
+    }
+
+  async updateData1(){
+    // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
+      this.dataService.addE2({
+        ID: 'E2',
+        body: this.option3, // Add appropriate value
+        date: this.currentDate, // Add appropriate value
+        gauge:this.option1, // Add appropriate value
+        pinlock: this.option2, // Add appropriate value
+        inspected: 'Kc Dimayuga', // Add appropriate value
+        nozzle: this.option,
+        time: this.currentTime,
+         })
+         await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
+        
+  
+    // }
+    //   else{  
+    //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+    //       }
+  
+    }
+  
     async updateData(){
-  // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check' || this.option1 === 'notworking' && this.option2 === 'check' || this.option2 === 'notworking' && this.option3 === 'check' || this.option3 === 'notworking'){
+  // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
     this.dataService.addE1({
+      ID:'E1',
       body: this.option3, // Add appropriate value
       date: this.currentDate, // Add appropriate value
       gauge:this.option1, // Add appropriate value
@@ -83,9 +154,9 @@ export class UFireExtinguisherPage implements OnInit {
       
 
   // }
-    // else{  
-    //   await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-    //     }
+  //   else{  
+  //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+  //       }
     
     // this.dataService.addE1({date: this.currentDate});
     // console.log('Data updated!');
