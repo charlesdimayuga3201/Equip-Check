@@ -8,11 +8,11 @@
 		<h1 class="ct-title" >EquipCheck</h1>
 	<form (keydown.enter)="logMeIn()">
 		<ion-item lines="none" >
-			<ion-input class="input-user "    labelPlacement="stacked" placeholder="Username" type="text" [(ngModel)]="Username" name="username" required></ion-input>
+			<ion-icon name="person-circle-outline"> </ion-icon><ion-input class="input-pass"  labelPlacement="stacked" placeholder="Username" type="text" [(ngModel)]="Username" name="username" required></ion-input>	
 		</ion-item>
 	
 		<ion-item lines="none" >
-			<ion-input class="input-pass"  labelPlacement="stacked" placeholder="Password" type="password" [(ngModel)]="Password" name="password" required></ion-input>	
+			<ion-icon name="key-outline"></ion-icon> <ion-input class="input-pass"  labelPlacement="stacked" placeholder="Password" type="password" [(ngModel)]="Password" name="password" required></ion-input>	
 		</ion-item>
 			<ion-row>
 				<ion-col>

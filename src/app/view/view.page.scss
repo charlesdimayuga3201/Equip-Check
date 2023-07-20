@@ -79,7 +79,7 @@
   //   display: none;
   // }
 ion-tabs{
-  margin-top: 10vh;
+  margin-top: 4.4rem;
  
   // justify-content: center;
   // display: flex;
@@ -93,11 +93,18 @@ ion-toolbar, ion-content{
 ion-title{
   font-weight: 600;
 }
+
+ion-item{
+  --background: rgba(255, 255, 255, .5);
+}
 ion-tab-bar {
+
 
 
   justify-content: center;
   display: flex;
+  position: relative;
+
   --border: none;
   --background: rgba(255, 255, 255, .5);
   margin: 16px 20px;
@@ -106,6 +113,7 @@ ion-tab-bar {
   box-shadow: 
   0px 3px 6px 0px rgba(0, 0, 0, 0.04),
       0px 1px 3px 0px rgba(0, 0, 0, 0.02),;
+      height: 8vh;
 }
 ion-tab-button{
   width: 70%;
@@ -113,7 +121,7 @@ ion-tab-button{
 div{
   margin: 0;
   padding: 0;
-  margin-top: 40px;
+  margin-top: 60px;
   height: 170%;
   width: 170%;
   display: flex;

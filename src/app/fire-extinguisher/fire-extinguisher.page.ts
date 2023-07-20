@@ -2,10 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { DataService} from '../service/data.service';
-import { Firestore , collectionData, docData,  collection, doc, addDoc} from '@angular/fire/firestore';
+
+import { Firestore , collectionData, docData,  doc, addDoc} from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
-// import { AngularFirestore } from '@angular/fire/compat/firestore';
-// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+import { collection, query, orderBy, limit, getDocs, QuerySnapshot, QueryConstraint, QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
+
 
 @Component({
   selector: 'app-fire-extinguisher',
@@ -23,6 +25,8 @@ export class FireExtinguisherPage implements OnInit {
   selectedOption2!: string;
   selectedSegment!: string;
   selectedSegment1!: string;
+  FireExtinguisher!: string; 
+
   // updateContent() {
   //   // Clear the content when the segment changes
   //   // You can modify this function to perform any other necessary updates
@@ -36,6 +40,48 @@ export class FireExtinguisherPage implements OnInit {
 
 
   ngOnInit() {
+
+const collectionRef = collection(this.firestore, 'E1');
+    const q = query(collectionRef, orderBy('date', 'desc'), limit(1));
+    console.log(q);
+    getDocs(q).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+      querySnapshot.docs.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
+        const latestDocument = doc.data();
+        this.sortedData= [latestDocument];
+        console.log(this.sortedData);
+      });
+    });
+
+    const collectionRef1 = collection(this.firestore, 'E2');
+    const q1 = query(collectionRef1, orderBy('date', 'desc'), limit(1));
+    console.log(q1);
+    getDocs(q1).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+      querySnapshot.docs.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
+        const latestDocument = doc.data();
+        this.sortedData1= [latestDocument];
+        console.log(this.sortedData1);
+      });
+    });
+    const collectionRef2 = collection(this.firestore, 'E3');
+    const q2 = query(collectionRef2, orderBy('date', 'desc'), limit(1));
+    console.log(q2);
+    getDocs(q2).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+      querySnapshot.docs.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
+        const latestDocument = doc.data();
+        this.sortedData2= [latestDocument];
+        console.log(this.sortedData2);
+      });
+    });
+
+
+
+//     const collectionRef1 = collection(this.firestore, 'E1');
+// const q1 = query(collectionRef1, orderBy('date', 'desc'));
+// console.log(q1);
+// getDocs(q1).then((querySnapshot: QuerySnapshot<DocumentData>) => {
+//   this.sortedData1 = querySnapshot.docs.map((doc) => doc.data());
+//   console.log(this.sortedData1);
+// });
   }
 //   constructor(private router: Router) { }
 //   FireExtinguisher(){
@@ -48,15 +94,14 @@ export class FireExtinguisherPage implements OnInit {
 //     this.router.navigate(['/sprinkler']);
   
 // }
-  
-// itemId = 'E1';
-// item$: Observable<any>;
+sortedData2: any[] = [];
+sortedData1: any = [];
+sortedData: any[] = [];
 view1: any = [];
 view2: any = [];
 view3: any = [];
 
-constructor( private dataService: DataService) { 
-  // this.item$ = this.firestore.doc(`items/${this.itemId}`).valueChanges();
+constructor( private dataService: DataService, private firestore:Firestore) { 
   
   this.dataService.getE1().subscribe(res =>{
     console.log(res); 

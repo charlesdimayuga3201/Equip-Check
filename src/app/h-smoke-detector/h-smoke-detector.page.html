@@ -1,0 +1,199 @@
+
+
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col>Safety Equipment</ion-col>
+    <ion-col> Buildings</ion-col>
+    <ion-col>Floors</ion-col>
+  </ion-row>
+</ion-grid> -->
+<!-- 
+<div class="design2">
+  <img src="/assets/form3.png" alt="">
+</div> -->
+<!-- <div class="design1">
+  <img src="/assets/form2.png" alt="">
+</div> -->
+<div class="bg-f1">
+  <img class ="bg2"src="/assets/floor15.svg" alt="">
+  </div>
+<div class="img-custom">
+<img class ="bg"src="/assets/5.svg" alt="">
+</div>
+
+<ion-grid [fixed]="true"  id="mySelect">
+  <ion-row>
+    <!-- <ion-col >
+      <ion-list>
+        <ion-item>
+          <ion-select class="custom-select" placeholder="Equipment">
+            <ion-select-option value="Fire_Extinguisher">Fire Extinguisher</ion-select-option>
+            <ion-select-option value="Smoke_Detector">Smoke Detector</ion-select-option>
+            <ion-select-option value="Sprinkler">Sprinkler</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-col> -->
+    
+
+  
+    <ion-col>
+        <ion-item lines ="none">
+        <ion-select   [(ngModel)]="selectedOption"   class="custom-select" placeholder="Select Equipment" interface="popover" fill="outline">
+          <ion-select-option  value="fire">SD1</ion-select-option>
+          <ion-select-option value="fire1">SD2</ion-select-option>
+          <ion-select-option value="fire2" >SD3</ion-select-option>
+        </ion-select>
+        <ion-select   [(ngModel)]="selectedOption1" class="custom-select1"   placeholder="Select Buildings" interface="popover" fill="outline">
+          <ion-select-option  value="fire">CICS</ion-select-option>
+          <ion-select-option  value="fire1">CEAFA</ion-select-option>
+          <ion-select-option  value="fire2">CIT</ion-select-option>
+        </ion-select>
+        <ion-select  [(ngModel)]="selectedOption2" class="custom-select1"  placeholder="Select Floor" interface="popover" fill="outline">
+          <ion-select-option  value="fire">1st Floor</ion-select-option>
+          <ion-select-option  value="fire1">2nd Floor</ion-select-option>
+          <ion-select-option  value="fire2">3rd Floor</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-col>
+
+    <!-- <ion-col>
+      <ion-list>
+      <ion-item lines ="none" >
+      
+    </ion-item>
+  </ion-list>
+</ion-col>
+
+    <ion-col>
+      <ion-list>
+      <ion-item lines ="none">
+     
+      </ion-item>
+    </ion-list>
+    </ion-col> -->
+  </ion-row>
+</ion-grid>
+<div class="main-content">
+  <div class = "content-sec" *ngIf="selectedOption === 'fire' && selectedOption1 === 'fire' && selectedOption2  === 'fire' ">
+  <ion-grid fixed lines >
+    <ion-row>
+      <ion-col class="header"  >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight" >
+    <ion-row class="header"  >
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Power Source</ion-col>
+      <ion-col>Smoke Sensor</ion-col>
+      <ion-col>Sound</ion-col>
+      <ion-col>Capacity</ion-col>
+      <ion-col>Inspected By</ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngFor="let SD1 of sortedData1; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+    <ion-row >
+ 
+      <ion-col>{{SD1.date}}</ion-col>
+      <ion-col>{{SD1.time}}</ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD1.powersource=== 'check'"></ion-icon> <ion-icon class="cross" name="close-circle-outline" *ngIf = "SD1.powersource === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD1.smokesensor === 'check1'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "SD1.smokesensor === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD1.sound === 'check2'"></ion-icon> <ion-icon   class="cross"name="close-circle-outline" *ngIf = "SD1.sound === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col>{{SD1.capacity}}</ion-col>
+      <ion-col>{{SD1.inspected}}</ion-col>
+      <!-- <ion-col size="12">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1130" height="2" viewBox="0 0 1130 2" fill="none">
+          <path d="M0 1H1130" stroke="#F2F2F2"/>
+          </svg>
+      </ion-col> -->
+    </ion-row>
+  
+  </ion-grid>
+</div>
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire1' && selectedOption1 === 'fire' && selectedOption2  === 'fire1' ">
+  <ion-grid fixed lines >
+    <ion-row>
+      <ion-col class="header"  >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight" >
+    <ion-row class="header"  >
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Nozzle</ion-col>
+      <ion-col>Gauge</ion-col>
+      <ion-col>Pin/Lock</ion-col>
+      <ion-col>Body</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngFor="let SD2 of sortedData2; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+    <ion-row >
+ 
+      <ion-col>{{SD2.date}}</ion-col>
+      <ion-col>{{SD2.time}}</ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD2.powersource=== 'check'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "SD2.powersource === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD2.smokesensor === 'check1'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "SD2.smokesensor === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD2.sound === 'check2'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "SD2.sound === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col>{{SD2.capacity}}</ion-col>
+      <ion-col>{{SD2.inspected}}</ion-col>
+      <!-- <ion-col size="12">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1130" height="2" viewBox="0 0 1130 2" fill="none">
+          <path d="M0 1H1130" stroke="#F2F2F2"/>
+          </svg>
+      </ion-col> -->
+    </ion-row>
+  
+  </ion-grid>
+</div>
+
+<div class = "content-sec" *ngIf="selectedOption === 'fire2' && selectedOption1 === 'fire' && selectedOption2  === 'fire2' ">
+  <ion-grid fixed lines >
+    <ion-row>
+      <ion-col class="header"  >Remarks</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="highlight" >
+    <ion-row class="header"  >
+      <ion-col>Date</ion-col>
+      <ion-col>Time</ion-col>
+      <ion-col>Power Source</ion-col>
+      <ion-col>Smoke Sensor</ion-col>
+      <ion-col>Sound</ion-col>
+      <ion-col>Capacity</ion-col>
+      <ion-col>Inspected By</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngFor="let SD3 of sortedData3; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+    <ion-row >
+ 
+      <ion-col>{{SD3.date}}</ion-col>
+      <ion-col>{{SD3.time}}</ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD3.powersource=== 'check'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "SD3.powersource === 'notworking'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD3.smokesensor === 'check1'"></ion-icon> <ion-icon  class="cross" name="close-circle-outline" *ngIf = "SD3.smokesensor === 'notworking1'"> </ion-icon></ion-col>
+      <ion-col><ion-icon name="checkmark-circle-outline" *ngIf = "SD3.sound === 'check2'"></ion-icon> <ion-icon   class="cross" name="close-circle-outline" *ngIf = "SD3.sound === 'notworking2'"> </ion-icon></ion-col>
+      <ion-col>{{SD3.capacity}}</ion-col>
+      <ion-col>{{SD3.inspected}}</ion-col>
+      <!-- <ion-col size="12">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1130" height="2" viewBox="0 0 1130 2" fill="none">
+          <path d="M0 1H1130" stroke="#F2F2F2"/>
+          </svg>
+      </ion-col> -->
+    </ion-row>
+  
+  </ion-grid>
+</div>
+</div>
+
+
+
+</ion-content>
+
+
+  

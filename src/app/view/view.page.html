@@ -14,26 +14,73 @@
  
 <ion-tabs align = "center" class="custom-tabs">    
   <ion-tab-bar slot="top" >
+    
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+
+
+
     <ion-tab-button tab="fire-extinguisher" class="fire" >
       <div>
       <img class="tab-img" src="/assets/se-fe.png" alt="">
-      <ion-icon name="radio-button-on-outline"></ion-icon>
+      <!-- <ion-icon name="radio-button-on-outline"></ion-icon> -->
       </div>
-
       <!-- <p>Fire Exinguisher</p> -->
     </ion-tab-button>
+
+    <ion-item lines="none">
+      <ion-label> </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label> </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+
+
     <ion-tab-button tab="smoke-detector" class="smoke">  
       <div>
       <img class="tab-img" src="/assets/se-sd.png" alt="">
-      <ion-icon name="radio-button-on-outline"></ion-icon>
+      <!-- <ion-icon name="radio-button-on-outline"></ion-icon> -->
       </div>
-  
       <!-- <p>Smoke Detector</p> -->
     </ion-tab-button>
+
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label></ion-label>
+    </ion-item>
+
+
     <ion-tab-button tab="sprinkler" class="sprinkler">
       <div>
       <img  class="tab-img"src="/assets/se-s.png" alt="">
-       <ion-icon name="radio-button-on-outline"></ion-icon>
+       <!-- <ion-icon name="radio-button-on-outline"></ion-icon> -->
       </div>
      
       <!-- <p>Sprinkler</p> -->
@@ -54,16 +101,3 @@
   </ion-tab-bar>
 </ion-tabs> -->
 </ion-content>
-<script>document.addEventListener('ionTabsDidChange', (event) => {
-  const selectedTab = event.detail.tab;
-
-  // Remove 'selected' class from all tab buttons
-  const tabButtons = document.querySelectorAll('.custom-tab');
-  tabButtons.forEach((tabButton) => {
-    tabButton.classList.remove('selected');
-  });
-
-  // Add 'selected' class to the selected tab button
-  const selectedTabButton = document.querySelector(`.custom-tab[tab="${selectedTab}"]`);
-  selectedTabButton.classList.add('selected');
-});</script>
