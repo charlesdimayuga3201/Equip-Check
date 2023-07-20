@@ -71,6 +71,18 @@ tr{
   //   padding-bottom: 10px;
   //   border: 1px solid;
   // }
+  .img-c{
+    height: 60px;
+    width: auto;
+    // position: relative;
+    // justify-content: left;
+    // align-items: left;
+
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    transform: translateX(-10%);
+  }
   ion-button{
     color: #fff;
     --background: #48a7fb;
@@ -322,10 +334,30 @@ ion-select{
   .bg3{
     position: absolute;
     display: flex;
-    margin-left: 45rem;
+    margin-left: 33rem;
     align-items: center;
     justify-content: center;
     margin-top: -70px;
     height: auto;
     width: 540px;
+  }
+  ion-row{
+    --background: transparent;
+    --padding: 0;
+    --margin: 0;
+  }
+  ion-item{
+    --background: transparent;
+    --padding: 0;
+    --margin: 0;
+  }
+  ion-select{
+    --background: transparent;
+    --padding: 0;
+    --margin: 0;
+  }
+  ion-select-option{
+    --background: transparent;
+    --padding: 0;
+    --margin: 0;
   }
