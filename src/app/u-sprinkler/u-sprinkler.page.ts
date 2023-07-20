@@ -77,7 +77,8 @@ export class USprinklerPage implements OnInit {
   
   async updateData(){
     // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
-      this.dataService.addS1({
+      if(this.option && this.option1 && this.option3 && this.option4 && this.option5 && this.option6){  
+    this.dataService.addS1({
         ID: 'S1',
         date: this.currentDate, // Add appropriate value
         sprinklerhead: this.option,
@@ -94,15 +95,16 @@ export class USprinklerPage implements OnInit {
          await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
         
   
-    // }
-    //   else{  
-    //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-    //       }
+    }
+      else{  
+        await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+          }
   
     }
     async updateData1(){
       // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
-        this.dataService.addS2({
+        if(this.option && this.option1 && this.option3 && this.option4 && this.option5 && this.option6){   
+      this.dataService.addS2({
           ID: 'S2',
           date: this.currentDate, // Add appropriate value
           sprinklerhead: this.option,
@@ -119,15 +121,16 @@ export class USprinklerPage implements OnInit {
            await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
           
     
-      // }
-      //   else{  
-      //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-      //       }
+      }
+        else{  
+          await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+            }
     
       }
       async updateData2(){
         // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
-          this.dataService.addS3({
+          if(this.option && this.option1 && this.option3 && this.option4 && this.option5 && this.option6){  
+        this.dataService.addS3({
             ID: 'S3',
             date: this.currentDate, // Add appropriate value
             sprinklerhead: this.option,
@@ -144,10 +147,10 @@ export class USprinklerPage implements OnInit {
              await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
             
       
-        // }
-        //   else{  
-        //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-        //       }
+        }
+          else{  
+            await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+              }
       
         }
 

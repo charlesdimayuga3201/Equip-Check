@@ -40,7 +40,11 @@ export class HFireExtinguisherPage implements OnInit {
     // });
 
     const collectionRef1 = collection(this.firestore, 'E1');
-const q1 = query(collectionRef1, orderBy('date', 'desc'), );
+    const q1 = query(
+      collectionRef1,
+      orderBy('date', 'desc'), // Order by the 'date' field in descending order
+      // Then order by the 'time' field in descending order
+    );
 console.log(q1);
 getDocs(q1).then((querySnapshot: QuerySnapshot<DocumentData>) => {
   this.sortedData1 = querySnapshot.docs.map((doc) => doc.data());

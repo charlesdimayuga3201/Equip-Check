@@ -96,7 +96,8 @@ export class UFireExtinguisherPage implements OnInit {
   
   async updateData2(){
     // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
-      this.dataService.addE3({
+      if(this.option && this.option1 && this.option3){  
+    this.dataService.addE3({
         ID: 'E3',
         body: this.option3, // Add appropriate value
         date: this.currentDate, // Add appropriate value
@@ -109,16 +110,17 @@ export class UFireExtinguisherPage implements OnInit {
          await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
         
   
-    // }
-    //   else{  
-    //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-    //       }
+    }
+      else{  
+        await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+          }
   
     }
 
   async updateData1(){
     // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
-      this.dataService.addE2({
+      if(this.option && this.option1 && this.option3){  
+    this.dataService.addE2({
         ID: 'E2',
         body: this.option3, // Add appropriate value
         date: this.currentDate, // Add appropriate value
@@ -131,16 +133,22 @@ export class UFireExtinguisherPage implements OnInit {
          await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
         
   
-    // }
-    //   else{  
-    //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-    //       }
+    }
+      else{  
+        await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+          }
   
     }
   
     async updateData(){
   // if(this.option === 'check' || this.option === 'notworking' && this.option1 === 'check1' || this.option1 === 'notworking1' && this.option2 === 'check2' || this.option2 === 'notworking2' && this.option3 === 'check3' || this.option3 === 'notworking3'){
-    this.dataService.addE1({
+   
+  
+  
+  if(this.option && this.option1 && this.option3){
+  
+  
+  this.dataService.addE1({
       ID:'E1',
       body: this.option3, // Add appropriate value
       date: this.currentDate, // Add appropriate value
@@ -153,10 +161,10 @@ export class UFireExtinguisherPage implements OnInit {
        await this.showAlert('Successful Inspect', 'You Successful Inspected The Equipment.');
       
 
-  // }
-  //   else{  
-  //     await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
-  //       }
+  }
+    else{  
+      await this.showAlert('Invalid to Inspect', 'Please Check All The Parts.');
+        }
     
     // this.dataService.addE1({date: this.currentDate});
     // console.log('Data updated!');
